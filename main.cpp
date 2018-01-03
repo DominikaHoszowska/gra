@@ -20,40 +20,47 @@ bool sprawdzMaksymalnaLiczbeTur(int liczbaTur)
     }
     return false;
 }
-
-int main(){
+bool sprawdzZnak(char znak)
+{
+    if(znak=='L'||znak=='k'||znak=='M'||znak=='H'||znak=='K'||znak=='B'||znak=='T')
+    {
+        return 1;
+    }
+    return 0;
+}
+int main() {
 
     int dlugoscLinii, liczbaTur;
-    std::cout<<"Wprowadz dlugosc linii"<<std::endl;
-    std::cin>>dlugoscLinii;
+    std::cout << "Wprowadz dlugosc linii" << std::endl;
+    std::cin >> dlugoscLinii;
 
-    while(!sprawdzDlugoscLinii(dlugoscLinii))
-    {
-        std::cout<<"Wprowadz dodatnia liczbe parzysta oznaczajaca dlugosc linii"<<std::endl;
-        std::cin>>dlugoscLinii;
+    while (!sprawdzDlugoscLinii(dlugoscLinii)) {
+        std::cout << "Wprowadz dodatnia liczbe parzysta oznaczajaca dlugosc linii" << std::endl;
+        std::cin >> dlugoscLinii;
     }
-    std::cout<<"Wprowadz maksymalna liczbe tur"<<std::endl;
-    std::cin>>liczbaTur;
-    while(!sprawdzMaksymalnaLiczbeTur(liczbaTur))
-    {
-        std::cout<<"Wprowadz dodatnia liczbe oznaczajaca maksymalna liczbe tur"<<std::endl;
-        std::cin>>liczbaTur;
+    std::cout << "Wprowadz maksymalna liczbe tur" << std::endl;
+    std::cin >> liczbaTur;
+    while (!sprawdzMaksymalnaLiczbeTur(liczbaTur)) {
+        std::cout << "Wprowadz dodatnia liczbe oznaczajaca maksymalna liczbe tur" << std::endl;
+        std::cin >> liczbaTur;
     }
-    Gra gra(dlugoscLinii,liczbaTur);
-    bool zainicjalizowano;
-    do {
-        zainicjalizowano = true;
-
-
-
-        try {
-            gra.inicjalizuj();
+    Gra gra(dlugoscLinii, liczbaTur);
+    char tabPole[6][dlugoscLinii];
+    char znak;
+    std::cout<<"Wprowadz wojska";
+    for (int nrWiersza = 0; nrWiersza< 6; nrWiersza++)
+    {
+        for(int nrKolumny=0;nrKolumny<dlugoscLinii;nrKolumny++)
+        {
+            std::cin>>znak;
+            while(!sprawdzZnak(znak))
+            {
+                std::cout<<"Wprowadz poprawny znak";
+                std::cin>>znak;
+            }
+            tabPole[nrWiersza][nrKolumny]=znak;
         }
-        catch (std::invalid_argument e) {
-            std::cerr << e.what() << std::endl;
-            zainicjalizowano = false;
-        }
-    }while(!zainicjalizowano);
+    }
 
     while(!gra.czyKoniec())
     {
