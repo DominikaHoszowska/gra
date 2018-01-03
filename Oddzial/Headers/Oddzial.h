@@ -15,7 +15,7 @@ public:
     virtual void wspieraj(PoleDrugiejLinii);
     virtual Pole* zwrocPole();
     virtual bool czyPusty();
-
+    virtual void ustawPole(Pole*);
 protected:
     int silaAtaku_;
     int obrona_;
@@ -29,7 +29,7 @@ protected:
     virtual void atakuj(PoleDrugiejLinii);
     virtual void atakuj(PolePierwszejLinii);
     virtual void wspieraj(PolePosilkow);
-    virtual void ustawPole(Pole*);
+
 private:
 
     Pole* pole_;
