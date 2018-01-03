@@ -4,25 +4,25 @@ project(Model)
 set(CMAKE_CXX_STANDARD 11)
 
 set(SOURCE_FILES
-        Oddzial/Bebniarz.cpp
-        Oddzial/Bebniarz.h
+        Oddzial/SRC/Bebniarz.cpp
+        Oddzial/Headers/Bebniarz.h
         Gra.cpp
         Gra.h
         Gracz.cpp
         Gracz.h
-        Oddzial/Halabardzista.cpp
-        Oddzial/Halabardzista.h
+        Oddzial/SRC/Halabardzista.cpp
+        Oddzial/Headers/Halabardzista.h
         Interface1.h
-        Oddzial/Konny.cpp
-        Oddzial/Konny.h
-        Oddzial/Kusznik.cpp
-        Oddzial/Kusznik.h
-        Oddzial/Lucznik.cpp
-        Oddzial/Lucznik.h
-        Oddzial/Miecznik.cpp
-        Oddzial/Miecznik.h
-        Oddzial/Oddzial.cpp
-        Oddzial/Oddzial.h
+        Oddzial/SRC/Konny.cpp
+        Oddzial/Headers/Konny.h
+        Oddzial/SRC/Kusznik.cpp
+        Oddzial/Headers/Kusznik.h
+        Oddzial/SRC/Lucznik.cpp
+        Oddzial/Headers/Lucznik.h
+        Oddzial/SRC/Miecznik.cpp
+        Oddzial/Headers/Miecznik.h
+        Oddzial/SRC/Oddzial.cpp
+        Oddzial/Headers/Oddzial.h
         Pole/Pole.cpp
         Pole/Pole.h
         PoleBitwy.cpp
@@ -33,16 +33,16 @@ set(SOURCE_FILES
         Pole/PolePierwszejLinii.h
         Pole/PolePosilkow.cpp
         Pole/PolePosilkow.h
-        Oddzial/Tarczownik.cpp
-        Oddzial/Tarczownik.h
+        Oddzial/SRC/Tarczownik.cpp
+        Oddzial/Headers/Tarczownik.h
         Wojsko.cpp
         Wojsko.h
-        Oddzial/Wsparcie.cpp
-        Oddzial/Wsparcie.h
-        Oddzial/Zasiegowa.cpp
-        Oddzial/Zasiegowa.h
-        Oddzial/Zwarcie.cpp
-        Oddzial/Zwarcie.h
+        Oddzial/SRC/Wsparcie.cpp
+        Oddzial/Headers/Wsparcie.h
+        Oddzial/SRC/Zasiegowa.cpp
+        Oddzial/Headers/Zasiegowa.h
+        Oddzial/SRC/Zwarcie.cpp
+        Oddzial/Headers/Zwarcie.h
         main.cpp)
 
 add_executable(Model ${SOURCE_FILES})

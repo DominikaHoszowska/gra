@@ -25,8 +25,8 @@ public:
 
     void stworzGraczy();
 
-    bool Sprawdzznak();
-
+    virtual Gracz* zwrocPierwszegoGracza();
+    virtual Gracz* zwrocDrugiegoGracza();
     PoleBitwy* zwrocPoleBitwy();
 
     virtual ~Gra() {

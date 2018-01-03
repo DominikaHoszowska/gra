@@ -6,26 +6,24 @@
 #ifndef _WOJSKO_H
 #define _WOJSKO_H
 
+#include "Oddzial/Headers/Oddzial.h"
+#include "Gracz.h"
+
 class Wojsko {
 public: 
     
     void atak();
+    virtual Oddzial& kogoWspierac(Oddzial&);
+    virtual Oddzial& kogoAtakowac(Oddzial&);
+    virtual Gracz* zwrocGracza();
 
-    Oddzial& kogoWspierac(void Oddzial&);
-    
-    /**
-     * @param Oddzial&
-     */
-    Oddzial& kogoAtakowac(void Oddzial&);
-    class AssociationClass1 {
-    };
 private: 
     
     void aktualizujStan();
-    
     void konsolidacjaSzeregow();
-    
     bool czyPuste();
+    Gracz* gracz_;
+
 };
 
 #endif //_WOJSKO_H

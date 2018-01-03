@@ -12,7 +12,7 @@
 class Lucznik: public Zasiegowa {
 public:
     Lucznik();
-    static char OZNACZENIE = 'L';
+    static const char OZNACZENIE = 'L';
 };
 
 #endif //_LUCZNIK_H

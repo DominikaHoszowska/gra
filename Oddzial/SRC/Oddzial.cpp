@@ -1,4 +1,4 @@
-#include "Oddzial.h"
+#include "../Headers/Oddzial.h"
 #include <iostream>
 #include <stdexcept>
 
@@ -6,7 +6,6 @@ void Oddzial::atakuj() {
     throw std::runtime_error("TODO");
 
 }
-
 void Oddzial::atakuj(void PolePosilkow) {
     throw std::runtime_error("TODO");
 }
@@ -37,4 +36,8 @@ virtual void Oddzial::atakuj(void PolePierwszejLinii) {
 
 virtual void Oddzial::wspieraj(void PolePosilkow) {
     throw std::runtime_error("TODO");
+}
+Pole*Oddzial:: zwrocPole()
+{
+    return this->pole_;
 }

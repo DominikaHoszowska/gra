@@ -1,4 +1,4 @@
-#include "Lucznik.h"
+#include "../Headers/Lucznik.h"
 
 Lucznik::Lucznik()
 {

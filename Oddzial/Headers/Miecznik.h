@@ -12,7 +12,7 @@
 class Miecznik: public Zwarcie {
 public:
     Miecznik();
-    static char OZNACZENIE = 'M';
+    static const char OZNACZENIE = 'M';
 };
 
 #endif //_MIECZNIK_H

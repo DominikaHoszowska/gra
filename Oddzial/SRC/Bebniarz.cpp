@@ -1,4 +1,4 @@
-#include "Bebniarz.h"
+#include "../Headers/Bebniarz.h"
 
 Bebniarz::Bebniarz()
 {

@@ -14,7 +14,7 @@ public:
     Halabardzista();
 
 public:
-    static char OZNACZENIE = 'H';
+    static const char OZNACZENIE = 'H';
 };
 
 #endif //_HALABARDZISTA_H

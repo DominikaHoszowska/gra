@@ -1,4 +1,4 @@
-#include "Kusznik.h"
+#include "../Headers/Kusznik.h"
 
 Kusznik::Kusznik()
 {

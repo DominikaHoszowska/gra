@@ -1,4 +1,4 @@
-#include "Konny.h"
+#include "../Headers/Konny.h"
 
 Konny::Konny()
 {

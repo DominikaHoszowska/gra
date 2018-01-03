@@ -1,12 +1,5 @@
-/**
- * Project Untitled
- */
-
-
 #ifndef _POLEBITWY_H
 #define _POLEBITWY_H
-
-
 #include <vector>
 #include <map>
 #include "Pole/PolePierwszejLinii.h"
@@ -18,16 +11,8 @@ class PoleBitwy {
 public: 
 
     PoleBitwy(int dlugoscLinii);
-
-    /**
-     * @param Gracz
-     */
     vector<PolePierwszejLinii*> znajdzPolePrzeciwnika(const Gracz& );
-    
-    /**
-     * @param Gracz
-     */
-    vector<vector<Pole*>> znajdzMojePole(const Gracz&);
+    <vector<Pole*>> znajdzMojePole(const Gracz&);
 
 private:
 

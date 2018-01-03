@@ -1,8 +1,3 @@
-/**
- * Project Untitled
- */
-
-
 #ifndef _POLEDRUGIEJLINII_H
 #define _POLEDRUGIEJLINII_H
 

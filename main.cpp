@@ -34,13 +34,15 @@ int main() {
     std::cout << "Wprowadz dlugosc linii" << std::endl;
     std::cin >> dlugoscLinii;
 
-    while (!sprawdzDlugoscLinii(dlugoscLinii)) {
+    while (!sprawdzDlugoscLinii(dlugoscLinii))
+    {
         std::cout << "Wprowadz dodatnia liczbe parzysta oznaczajaca dlugosc linii" << std::endl;
         std::cin >> dlugoscLinii;
     }
     std::cout << "Wprowadz maksymalna liczbe tur" << std::endl;
     std::cin >> liczbaTur;
-    while (!sprawdzMaksymalnaLiczbeTur(liczbaTur)) {
+    while (!sprawdzMaksymalnaLiczbeTur(liczbaTur))
+    {
         std::cout << "Wprowadz dodatnia liczbe oznaczajaca maksymalna liczbe tur" << std::endl;
         std::cin >> liczbaTur;
     }

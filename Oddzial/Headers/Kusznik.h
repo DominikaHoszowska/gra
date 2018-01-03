@@ -12,7 +12,7 @@
 class Kusznik: public Zasiegowa {
 public:
     Kusznik();
-    static char OZNACZENIE= 'k';
+    static const char OZNACZENIE= 'k';
 };
 
 #endif //_KUSZNIK_H

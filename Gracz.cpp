@@ -7,7 +7,15 @@ void Gracz::atak() {
 }
 
 Gracz::~Gracz() {
-    delete wojsko;
+    delete wojsko_;
 }
-
 Gracz::Gracz(int id_) : id_(id_) {}
+
+Wojsko* Gracz::zwrocWojsko()
+{
+    return this->wojsko_;
+}
+int Gracz:: zwrocId()
+{
+    return this->id_;
+}

@@ -1,8 +1,8 @@
 #include <iostream>
 #include <stdexcept>
 #include "Gra.h"
-#include "Oddzial/Lucznik.h"
-#include "Oddzial/Tarczownik.h"
+#include "Oddzial/Headers/Lucznik.h"
+#include "Oddzial/Headers/Tarczownik.h"
 
 
 bool Gra::czyKoniec() {
@@ -43,6 +43,15 @@ PoleBitwy* Gra::zwrocPoleBitwy()
     return this->poleBitwy_;
 }
 
+Gracz* Gra:: zwrocPierwszegoGracza()
+{
+    return this->pierwszyGracz_;
+}
+
+Gracz* Gra::zwrocDrugiegoGracza()
+{
+    return this->drugiGracz_;
+}
 void Gra::stworzPoleBitwy() {
     poleBitwy_ = new PoleBitwy(zwrocDlugoscLinii());
     char znak;
@@ -63,15 +72,6 @@ void Gra::stworzPoleBitwy() {
 
 }
 
-bool Gra::Sprawdzznak(char znak)
-{
-    if(znak=='L'||znak=='k'||znak=='M'||znak=='H'||znak=='K'||znak=='B'||znak==Tarczownik::Symbol)
-    {
-        return true;
-    }
-    return false;
-}
 
 Gra::Gra(int liczbaTur, int dlugoscLinii) : liczbaTur_(liczbaTur), dlugoscLinii_(dlugoscLinii) {
-
 }

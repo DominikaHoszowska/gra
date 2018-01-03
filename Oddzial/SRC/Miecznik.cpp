@@ -1,4 +1,4 @@
-#include "Miecznik.h"
+#include "../Headers/Miecznik.h"
 
 Miecznik::Miecznik()
 {

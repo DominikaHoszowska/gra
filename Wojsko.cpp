@@ -1,5 +1,5 @@
 #include "Wojsko.h"
-#include "Oddzial/Oddzial.h"
+#include "Oddzial/Headers/Oddzial.h"
 #include <stdexcept>
 
 void Wojsko::atak() {
@@ -25,4 +25,9 @@ void Wojsko::konsolidacjaSzeregow() {
 
 bool Wojsko::czyPuste() {
     throw std::runtime_error("TODO");
+}
+
+Gracz* Wojsko::zwrocGracza()
+{
+    return  this->gracz_;
 }
