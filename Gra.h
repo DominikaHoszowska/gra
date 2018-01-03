@@ -4,7 +4,6 @@
 
 #ifndef _GRA_H
 #define _GRA_H
-
 #include "PoleBitwy.h"
 #include "Gracz.h"
 
