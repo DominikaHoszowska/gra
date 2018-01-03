@@ -12,7 +12,7 @@
 class Miecznik: public Zwarcie {
 public:
     Miecznik();
-    static char oznaczenie_ = 'M';
+    static char OZNACZENIE = 'M';
 };
 
 #endif //_MIECZNIK_H

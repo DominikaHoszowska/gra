@@ -1,7 +1,7 @@
 #include <stdexcept>
 #include "PoleBitwy.h"
-#include "PoleDrugiejLinii.h"
-#include "PolePosilkow.h"
+#include "Pole/PoleDrugiejLinii.h"
+#include "Pole/PolePosilkow.h"
 vector<PolePierwszejLinii> PoleBitwy::znajdzPolePrzeciwnika(void Gracz) {
     throw std::runtime_error("TODO");
 }

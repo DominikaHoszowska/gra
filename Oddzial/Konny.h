@@ -13,7 +13,7 @@ class Konny: public Zwarcie {
 public:
     Konny();
 
-    static char oznaczenie_ = 'K';
+    static char OZNACZENIE= 'K';
 };
 
 #endif //_KONNY_H

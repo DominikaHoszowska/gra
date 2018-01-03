@@ -9,7 +9,7 @@
 
 #include <vector>
 #include <map>
-#include "PolePierwszejLinii.h"
+#include "Pole/PolePierwszejLinii.h"
 #include "Gracz.h"
 
 using namespace std;

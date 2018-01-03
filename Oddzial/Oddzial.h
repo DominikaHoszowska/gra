@@ -6,7 +6,7 @@
 #ifndef _ODDZIAL_H
 #define _ODDZIAL_H
 
-#include "PolePierwszejLinii.h"
+#include "../Pole/PolePierwszejLinii.h"
 
 class Oddzial {
 public: 

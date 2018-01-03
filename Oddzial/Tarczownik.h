@@ -15,7 +15,7 @@ public:
     Tarczownik();
 
 public:
-    static char oznaczenie_ = 'T';
+    static char OZNACZENIE = 'T';
 };
 
 #endif //_TARCZOWNIK_H

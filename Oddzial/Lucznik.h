@@ -12,7 +12,7 @@
 class Lucznik: public Zasiegowa {
 public:
     Lucznik();
-    static char oznaczenie_ = 'L';
+    static char OZNACZENIE = 'L';
 };
 
 #endif //_LUCZNIK_H

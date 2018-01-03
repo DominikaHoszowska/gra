@@ -1,5 +1,5 @@
 #include "Wojsko.h"
-#include "Oddzial.h"
+#include "Oddzial/Oddzial.h"
 #include <stdexcept>
 
 void Wojsko::atak() {

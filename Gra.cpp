@@ -1,8 +1,8 @@
 #include <iostream>
 #include <stdexcept>
 #include "Gra.h"
-#include "Lucznik.h"
-#include "Tarczownik.h"
+#include "Oddzial/Lucznik.h"
+#include "Oddzial/Tarczownik.h"
 
 
 bool Gra::czyKoniec() {
@@ -22,6 +22,7 @@ void Gra::stworzGraczy()
 {
     this->pierwszyGracz_= Gracz(0);
     this->drugiGracz_= Gracz(1);
+
 }
 
 void Gra::tura() {
@@ -51,7 +52,7 @@ void Gra::stworzPoleBitwy() {
         {
             Oddzial* oddzial = nullptr;
             switch(char a){
-                case Tarczownik::Symbol:
+                case Tarczownik::OZNACZENIE:
                     oddzial = new Tarczownik();
                     break;
                 default:
