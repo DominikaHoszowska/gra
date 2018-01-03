@@ -29,7 +29,7 @@ protected:
     virtual void atakuj(PoleDrugiejLinii);
     virtual void atakuj(PolePierwszejLinii);
     virtual void wspieraj(PolePosilkow);
-
+    virtual void ustawPole(Pole*);
 private:
 
     Pole* pole_;

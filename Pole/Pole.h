@@ -7,6 +7,7 @@ private:
 public: 
     
     virtual Oddzial* zwrocOddzial();
+    virtual void ustaw(Oddzial*);
 };
 
 #endif //_POLE_H

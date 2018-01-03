@@ -21,6 +21,7 @@ private:
     
     void aktualizujStan();
     void konsolidacjaSzeregow();
+    void przesuniecieWojsk();
     bool czyPuste();
     Gracz* gracz_;
 

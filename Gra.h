@@ -1,7 +1,3 @@
-/**
- * Project Untitled
- */
-
 #ifndef _GRA_H
 #define _GRA_H
 #include "PoleBitwy.h"
@@ -20,9 +16,12 @@ public:
 
     int zwrocDlugoscLinii();
 
-    void stworzPoleBitwy();
+    void stworzPoleBitwy(char *tabPole);
 
     void stworzGraczy();
+
+
+
 
     virtual Gracz* zwrocPierwszegoGracza();
     virtual Gracz* zwrocDrugiegoGracza();

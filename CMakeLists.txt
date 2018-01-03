@@ -12,7 +12,6 @@ set(SOURCE_FILES
         Gracz.h
         Oddzial/SRC/Halabardzista.cpp
         Oddzial/Headers/Halabardzista.h
-        Interface1.h
         Oddzial/SRC/Konny.cpp
         Oddzial/Headers/Konny.h
         Oddzial/SRC/Kusznik.cpp

@@ -11,15 +11,18 @@ vector<vector<Pole*>> PoleBitwy::znajdzMojePole(const Gracz&) {
 }
 
 PoleBitwy::PoleBitwy(int dlugoscLinii):poleGry_(2) {
-
-
     for (int i = 0; i < dlugoscLinii; ++i){
-        poleGry_.at(0).at(0).push_back(new PolePierwszejLinii());
+        poleGry_.at(0).at(0).push_back(new PolePosilkow());
         poleGry_.at(0).at(1).push_back(new PoleDrugiejLinii());
-        poleGry_.at(0).at(2).push_back(new PolePosilkow());
+        poleGry_.at(0).at(2).push_back(new PolePierwszejLinii());
         poleGry_.at(1).at(0).push_back(new PolePierwszejLinii());
         poleGry_.at(1).at(1).push_back(new PoleDrugiejLinii());
         poleGry_.at(1).at(2).push_back(new PolePosilkow());
     }
+}
+void PoleBitwy:: ustaw(int nrGracza,int nrWiersza,int nrKolumny,Oddzial* oddzial)
+{
+    poleGry_.at(nrGracza).at(nrWiersza).at(nrKolumny)->ustaw(oddzial);
 
 }
+

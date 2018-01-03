@@ -13,7 +13,7 @@ public:
     PoleBitwy(int dlugoscLinii);
     vector<PolePierwszejLinii*> znajdzPolePrzeciwnika(const Gracz& );
     <vector<Pole*>> znajdzMojePole(const Gracz&);
-
+    virtual void ustaw(int nrGracza,int nrWiersza,int nrKolumny,Oddzial* oddzial);
 private:
 
     vector<vector<vector<Pole*>>> poleGry_;

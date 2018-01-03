@@ -3,6 +3,13 @@
 //
 #include <iostream>
 #include "Gra.h"
+#include "Oddzial/Headers/Lucznik.h"
+#include "Oddzial/Headers/Kusznik.h"
+#include "Oddzial/Headers/Miecznik.h"
+#include "Oddzial/Headers/Halabardzista.h"
+#include "Oddzial/Headers/Konny.h"
+#include "Oddzial/Headers/Bebniarz.h"
+#include "Oddzial/Headers/Tarczownik.h"
 
 bool sprawdzDlugoscLinii(int dlugoscLinii)
 {
@@ -22,7 +29,14 @@ bool sprawdzMaksymalnaLiczbeTur(int liczbaTur)
 }
 bool sprawdzZnak(char znak)
 {
-    if(znak=='L'||znak=='k'||znak=='M'||znak=='H'||znak=='K'||znak=='B'||znak=='T')
+
+    if(znak==Lucznik::OZNACZENIE
+       ||znak==Kusznik::OZNACZENIE
+       ||znak==Miecznik::OZNACZENIE
+       ||znak==Halabardzista::OZNACZENIE
+       ||znak==Konny::OZNACZENIE
+       ||znak==Bebniarz::OZNACZENIE
+       ||znak==Tarczownik::OZNACZENIE)
     {
         return 1;
     }
@@ -47,22 +61,22 @@ int main() {
         std::cin >> liczbaTur;
     }
     Gra gra(dlugoscLinii, liczbaTur);
+    /*Wczytanie wojsk*/
     char tabPole[6][dlugoscLinii];
     char znak;
     std::cout<<"Wprowadz wojska";
-    for (int nrWiersza = 0; nrWiersza< 6; nrWiersza++)
-    {
-        for(int nrKolumny=0;nrKolumny<dlugoscLinii;nrKolumny++)
-        {
-            std::cin>>znak;
-            while(!sprawdzZnak(znak))
-            {
-                std::cout<<"Wprowadz poprawny znak";
-                std::cin>>znak;
+    for (int nrWiersza = 0; nrWiersza< 6; nrWiersza++) {
+        for (int nrKolumny = 0; nrKolumny < dlugoscLinii; nrKolumny++) {
+            std::cin >> znak;
+            while (!sprawdzZnak(znak)) {
+                std::cout << "Wprowadz poprawny znak";
+                std::cin >> znak;
             }
-            tabPole[nrWiersza][nrKolumny]=znak;
+            tabPole[nrWiersza][nrKolumny] = znak;
         }
     }
+
+    gra.stworzPoleBitwy(*tabPole);
 
     while(!gra.czyKoniec())
     {

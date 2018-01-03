@@ -41,3 +41,7 @@ Pole*Oddzial:: zwrocPole()
 {
     return this->pole_;
 }
+void Oddzial:: ustawPole(Pole* pole)
+{
+    this->pole_=pole;
+}

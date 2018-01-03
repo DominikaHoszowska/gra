@@ -31,3 +31,7 @@ Gracz* Wojsko::zwrocGracza()
 {
     return  this->gracz_;
 }
+void przesuniecieWojsk()
+{
+    for(int nrKolumny=0;nrKolumny<)
+}
