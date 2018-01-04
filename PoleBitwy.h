@@ -21,8 +21,11 @@ public:
     virtual void przesuniecieWojsk(int);
     virtual void przesunPierwszyGracz();
     virtual void przesunDrugiGracz();
-    virtual void konsolidacjaPierwszyGracz(int);
-    virtual void konsolidacjaDrugiGracz(int);
+    virtual void konsolidacjaPierwszyGraczzNrSzeregu(int);
+    virtual void konsolidacjaDrugiGraczzNrSzeregu(int);
+    virtual void konsolidacjaPierwszyGracz();
+    virtual void konsolidacjaDrugiGracz();
+    virtual void konsolidacjaSzeregow();
 private:
     Gra* gra_;
 
