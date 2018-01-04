@@ -54,12 +54,11 @@ void PoleBitwy::wypisz()
         Gra::wypiszPrzerywnik();
     }
 }
-
-bool PoleBitwy::czyPuste(int nrGracza);
 void PoleBitwy::przesunOddzialy(){
     przesunPierwszyGracz();
     przesunDrugiGracz();
 }
+bool PoleBitwy::czyPuste(int nrGracza)
 {
     int nrWiersza;
     if(nrGracza==0)
