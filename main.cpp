@@ -77,11 +77,11 @@ int main() {
         }
     }
 
-    gra.stworzPoleBitwy(*tabPole);
+    gra.inicjalizuj(tabPole);
 
     while(!gra.czyKoniec())
     {
-        gra.tura();
+        gra.rozegrajTure();
     }
     return 0;
 }

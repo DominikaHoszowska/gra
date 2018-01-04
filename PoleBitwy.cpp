@@ -55,7 +55,11 @@ void PoleBitwy::wypisz()
     }
 }
 
-bool PoleBitwy::czyPuste(int nrGracza)
+bool PoleBitwy::czyPuste(int nrGracza);
+void PoleBitwy::przesunOddzialy(){
+    przesunPierwszyGracz();
+    przesunDrugiGracz();
+}
 {
     int nrWiersza;
     if(nrGracza==0)

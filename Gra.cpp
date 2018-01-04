@@ -9,15 +9,25 @@
 #include "Oddzial/Headers/Bebniarz.h"
 
 bool Gra::czyKoniec() {
-    if(zwrocLiczbeTur()<=0)
+    if(this->poleBitwy_->czyPuste(0))
     {
-        return false;
+        std::cout<<"Wygrał drugi gracz!!!";
+        return 1;
     }
-    /*TODO sprawdzic czy wojska nie sa puste*/
-
+    if(this->poleBitwy_->czyPuste(1))
+    {
+        std::cout<<"Wygrał pierwszy gracz!!!";
+        return 1;
+    }
+    if(aktualnyNrTury_==liczbaTur_)
+    {
+        std::cout<<"REMIS";
+        return true;
+    }
+    return false;
 }
-void Gra::inicjalizuj() {
-    stworzPoleBitwy();
+void Gra::inicjalizuj(char tabPole[6][zwrocDlugoscLinii()]) {
+    stworzPoleBitwy(tabPole[6][zwrocDlugoscLinii());
     stworzGraczy();
 }
 void Gra::stworzGraczy()
@@ -27,9 +37,14 @@ void Gra::stworzGraczy()
     */
 }
 void Gra::rozegrajTure() {
+    this->aktualnyNrTury_+=1;
     this->pierwszyGracz_->atak();
     this->drugiGracz_->atak();
-    /*TODO aktualizacja stanu, konsolidacja szeregów*/
+    this->poleBitwy_->
+    this->poleBitwy_->przesunOddzialy();
+    this->poleBitwy_->konsolidacjaSzeregow();
+    this->wypisz();
+
 }
 int Gra::zwrocLiczbeTur(){
     return this->liczbaTur_;

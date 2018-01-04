@@ -19,10 +19,6 @@ public:
     void stworzPoleBitwy(char tabPole[6][zwrocDlugoscLinii()]);
 
     void stworzGraczy();
-
-
-
-
     virtual Gracz* zwrocPierwszegoGracza();
     virtual Gracz* zwrocDrugiegoGracza();
     PoleBitwy* zwrocPoleBitwy();
@@ -31,7 +27,7 @@ public:
         delete pierwszyGracz_;
         delete drugiGracz_;
     }
-    void inicjalizuj();
+    void inicjalizuj(char tabPole[6][zwrocDlugoscLinii()]);
     virtual void wypisz();
     virtual static void wypiszPrzerywnik();
 private:

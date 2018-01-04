@@ -17,9 +17,10 @@ public:
     virtual void ustaw(int,int,int,Oddzial*);
     virtual void wypisz();
     virtual void ustawGre(Gra*);
-    virtual bool czyPuste(int);
+    virtual bool czyPuste(int);/*dostaje nr Gracza i sprawdza czy ma puste wojsko*/
     virtual void przesuniecieWojsk(int);
     virtual void przesunPierwszyGracz();
+    virtual void przesunOddzialy();/*Zleca przesuniecie oddzialow obydwu graczy*/
     virtual void przesunDrugiGracz();
     virtual void konsolidacjaPierwszyGraczzNrSzeregu(int);
     virtual void konsolidacjaDrugiGraczzNrSzeregu(int);
