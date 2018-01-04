@@ -36,7 +36,8 @@ bool sprawdzZnak(char znak)
        ||znak==Halabardzista::OZNACZENIE
        ||znak==Konny::OZNACZENIE
        ||znak==Bebniarz::OZNACZENIE
-       ||znak==Tarczownik::OZNACZENIE)
+       ||znak==Tarczownik::OZNACZENIE
+       ||znak=='X')
     {
         return 1;
     }

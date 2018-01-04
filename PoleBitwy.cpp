@@ -1,4 +1,5 @@
 #include <stdexcept>
+#include <iostream>
 #include "PoleBitwy.h"
 #include "Pole/PoleDrugiejLinii.h"
 #include "Pole/PolePosilkow.h"
@@ -24,5 +25,26 @@ void PoleBitwy:: ustaw(int nrGracza,int nrWiersza,int nrKolumny,Oddzial* oddzial
 {
     poleGry_.at(nrGracza).at(nrWiersza).at(nrKolumny)->ustaw(oddzial);
 
+}
+void PoleBitwy::ustawGre(Gra* gra)
+{
+    this->gra_=gra;
+}
+void PoleBitwy::wypisz()
+{
+    for(int nrGracza=0;nrGracza<2;nrGracza++)
+    {
+        for(int nrWiersza=0;nrWiersza<3;nrWiersza++)
+        {
+            for (int nrKolumny=0;nrKolumny<this->gra_->zwrocDlugoscLinii();nrKolumny++)
+            {
+                poleGry_.at(nrGracza).at(nrWiersza).at(nrKolumny)->wypisz();
+                std::cout<<" ";
+            }
+            std::cout<<std::endl;
+        }
+
+        Gra::wypiszPrzerywnik();
+    }
 }
 

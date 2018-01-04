@@ -29,7 +29,7 @@ bool Wojsko::czyPuste() {
 
 Gracz* Wojsko::zwrocGracza()
 {
-    return  this->gracz_;
+    return this->gracz_;
 }
 void przesuniecieWojsk()
 {
