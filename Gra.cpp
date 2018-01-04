@@ -40,9 +40,7 @@ void Gra::rozegrajTure() {
     this->aktualnyNrTury_+=1;
     this->pierwszyGracz_->atak();
     this->drugiGracz_->atak();
-    this->poleBitwy_->
-    this->poleBitwy_->przesunOddzialy();
-    this->poleBitwy_->konsolidacjaSzeregow();
+    this->poleBitwy_->aktualizujstan();
     this->wypisz();
 
 }

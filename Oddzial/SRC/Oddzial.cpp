@@ -45,3 +45,36 @@ void Oddzial:: ustawPole(Pole* pole)
 {
     this->pole_=pole;
 }
+
+Oddzial::Oddzial()
+{
+    morale_=0;
+}
+int Oddzial::obrazenia()
+{
+    return (1+this->silaAtaku_)*this->liczebnoscOddzialu_;
+}
+double Oddzial::zwrocMorale()
+{
+    return this->morale_;
+}
+void Oddzial:: wyzerujStraty()
+{
+    this->straty_=0;
+}
+
+bool Oddzial::przeliczStraty()
+{
+    int sumaStrat=(int) straty_;
+    if(sumaStrat>liczebnoscOddzialu_)
+    {
+        return true;
+    }
+    else
+    {
+        liczebnoscOddzialu_-=sumaStrat;
+        wyzerujStraty();
+        return false;
+    }
+
+}

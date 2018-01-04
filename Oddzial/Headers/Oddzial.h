@@ -9,6 +9,8 @@ class Oddzial {
 
 public:
 
+    Oddzial();
+
     virtual void atakuj();
     virtual void atakuj(PolePosilkow);
     virtual void wspieraj(PolePierwszejLinii);
@@ -17,6 +19,10 @@ public:
     virtual bool czyPusty();
     virtual void ustawPole(Pole*);
     virtual char OZNACZENIE;
+    virtual int obrazenia();
+    virtual double zwrocMorale();
+    virtual void wyzerujStraty();
+    bool przeliczStraty();/*zwraca prawde jezeli trzeba usunac oddzial bo liczba strat przewyzsza liczebnosc oddzialu*/
 protected:
     int silaAtaku_;
     int obrona_;
@@ -25,8 +31,8 @@ protected:
     int liczebnoscPoczatkowa;
     int zasieg_;
     int obrazenia_;
-    int straty_;
-    int morale_;
+    double straty_;
+    double morale_;
     int wspieraj_;
     virtual void atakuj(PoleDrugiejLinii);
     virtual void atakuj(PolePierwszejLinii);

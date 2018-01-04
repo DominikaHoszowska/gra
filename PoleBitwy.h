@@ -27,6 +27,9 @@ public:
     virtual void konsolidacjaPierwszyGracz();
     virtual void konsolidacjaDrugiGracz();
     virtual void konsolidacjaSzeregow();
+    virtual void aktualizujstan();
+    virtual void przeliczStraty();
+
 private:
     Gra* gra_;
 

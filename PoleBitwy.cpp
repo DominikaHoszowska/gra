@@ -194,14 +194,14 @@ void PoleBitwy::konsolidacjaDrugiGracz()
     {
         if(poleGry_.at(1).at(0).at(i)->zwrocOddzial()== nullptr)
         {
-            konsolidacjaPierwszyGraczzNrSzeregu(i);
+            konsolidacjaDrugiGraczzNrSzeregu(i);
         }
     }
     for(int i=prog*2-1;i>=prog;i--)
     {
         if(poleGry_.at(1).at(0).at(i)->zwrocOddzial()== nullptr)
         {
-            konsolidacjaPierwszyGraczzNrSzeregu(i);
+            konsolidacjaDrugiGraczzNrSzeregu(i);
         }
     }
 }
@@ -247,4 +247,29 @@ void PoleBitwy::konsolidacjaDrugiGraczzNrSzeregu(int nrSzeregu)
 void PoleBitwy::konsolidacjaSzeregow() {
     konsolidacjaPierwszyGracz();
     konsolidacjaDrugiGracz();
+}
+void PoleBitwy::aktualizujstan()
+{
+    przeliczStraty();
+    przesunOddzialy();
+    konsolidacjaSzeregow();
+}
+void PoleBitwy::przeliczStraty()
+{
+    for(int nrGracza=0;nrGracza<=1;nrGracza++)
+    {
+        for(int nrWiersza=0;nrWiersza<=2;nrWiersza++)
+        {
+            for(int nrKolumny=0;nrKolumny<this->gra_->zwrocDlugoscLinii();nrKolumny++)
+            {
+                if(poleGry_.at(nrGracza).at(nrWiersza).at(nrKolumny)->zwrocOddzial()!= nullptr)
+                {
+                    if(poleGry_.at(nrGracza).at(nrWiersza).at(nrKolumny)->zwrocOddzial()->przeliczStraty())
+                    {
+                        poleGry_.at(nrGracza).at(nrWiersza).at(nrKolumny)->usunOddzial();
+                    }
+                }
+            }
+        }
+    }
 }
