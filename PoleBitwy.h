@@ -12,8 +12,8 @@ class PoleBitwy {
 public: 
 
     PoleBitwy(int dlugoscLinii);
-    vector<PolePierwszejLinii*> znajdzPolePrzeciwnika(const Gracz& );
-    <vector<Pole*>> znajdzMojePole(const Gracz&);
+    vector<PolePierwszejLinii*> znajdzPolePrzeciwnika(const Gracz& );/*TODO*/
+    <vector<Pole*>> znajdzMojePole(const Gracz&);/*TODO*/
     virtual void ustaw(int,int,int,Oddzial*);
     virtual void wypisz();
     virtual void ustawGre(Gra*);

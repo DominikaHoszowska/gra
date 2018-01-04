@@ -22,7 +22,7 @@ public:
     virtual void ustawWspolrzedne(int nrGracza, int nrWiersza, int nrKolumny);
     virtual int odleglosc(Pole drugiePole);
     virtual void wypisz();
-    virtual void usunOddzial();
+    virtual void usunOddzial();/*TODO*/
 };
 
 #endif //_POLE_H

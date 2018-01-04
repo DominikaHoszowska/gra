@@ -18,7 +18,7 @@ public:
 
     void stworzPoleBitwy(char tabPole[6][zwrocDlugoscLinii()]);
 
-    void stworzGraczy();
+    void stworzGraczy();/*TODO*/
     virtual Gracz* zwrocPierwszegoGracza();
     virtual Gracz* zwrocDrugiegoGracza();
     PoleBitwy* zwrocPoleBitwy();

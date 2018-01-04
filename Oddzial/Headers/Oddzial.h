@@ -11,12 +11,12 @@ public:
 
     Oddzial();
 
-    virtual void atakuj();
-    virtual void atakuj(PolePosilkow);
-    virtual void wspieraj(PolePierwszejLinii);
-    virtual void wspieraj(PoleDrugiejLinii);
+    virtual void atakuj();/*TODO*/
+    virtual void atakuj(PolePosilkow);/*TODO*/
+    virtual void wspieraj(PolePierwszejLinii);/*TODO*/
+    virtual void wspieraj(PoleDrugiejLinii);/*TODO*/
     virtual Pole* zwrocPole();
-    virtual bool czyPusty();
+    virtual bool czyPusty();/*TODO*/
     virtual void ustawPole(Pole*);
     virtual char OZNACZENIE;
     virtual int obrazenia();
