@@ -24,14 +24,14 @@ void Wojsko::konsolidacjaSzeregow() {
 }
 
 bool Wojsko::czyPuste() {
-    throw std::runtime_error("TODO");
+    return this->poleBitwy_->czyPuste(this->zwrocGracza()->zwrocId());
 }
 
 Gracz* Wojsko::zwrocGracza()
 {
     return this->gracz_;
 }
-void przesuniecieWojsk()
+void Wojsko::przesuniecieWojsk()
 {
-    for(int nrKolumny=0;nrKolumny<)
+    this->poleBitwy_->przesuniecieWojsk(this->zwrocGracza()->zwrocId());
 }

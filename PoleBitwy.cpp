@@ -38,7 +38,14 @@ void PoleBitwy::wypisz()
         {
             for (int nrKolumny=0;nrKolumny<this->gra_->zwrocDlugoscLinii();nrKolumny++)
             {
-                poleGry_.at(nrGracza).at(nrWiersza).at(nrKolumny)->wypisz();
+                if(poleGry_.at(nrGracza).at(nrWiersza).at(nrKolumny)== nullptr)
+                {
+                    std::cout<<" X ";
+                }
+                else {
+                    poleGry_.at(nrGracza).at(nrWiersza).at(nrKolumny)->wypisz();
+
+                }
                 std::cout<<" ";
             }
             std::cout<<std::endl;
@@ -48,3 +55,115 @@ void PoleBitwy::wypisz()
     }
 }
 
+bool PoleBitwy::czyPuste(int nrGracza)
+{
+    int nrWiersza;
+    if(nrGracza==0)
+    {
+        nrWiersza=2;
+    }
+    else
+        nrWiersza=0;
+    for(int nrKolumny=0;nrKolumny<this->gra_->zwrocDlugoscLinii();nrKolumny++)
+    {
+        if(poleGry_.at(nrGracza).at(nrWiersza).at(nrKolumny)->zwrocOddzial()!= nullptr)
+        {
+            return false;
+        }
+    }
+    return true;
+
+}
+void PoleBitwy::przesuniecieWojsk(int nrGracza)
+{
+    if(nrGracza==0)
+    {
+        przesunPierwszyGracz();
+    }
+    else
+    {
+        przesunDrugiGracz();
+    }
+}
+void PoleBitwy::przesunPierwszyGracz()
+{
+    for(int nrKolumny=0;nrKolumny<this->gra_->zwrocDlugoscLinii();nrKolumny++)
+    {
+         if(poleGry_.at(0).at(2).at(nrKolumny)->zwrocOddzial()== nullptr)
+         {
+             if(poleGry_.at(0).at(1).at(nrKolumny)->zwrocOddzial()!= nullptr)
+             {
+                 poleGry_.at(0).at(2).at(nrKolumny)->ustaw(poleGry_.at(0).at(1).at(nrKolumny)->zwrocOddzial());
+                 if(poleGry_.at(0).at(0).at(nrKolumny)->zwrocOddzial()!= nullptr)
+                 {
+                     poleGry_.at(0).at(1).at(nrKolumny)->ustaw(poleGry_.at(0).at(0).at(nrKolumny)->zwrocOddzial());
+                     poleGry_.at(0).at(0).at(nrKolumny)->ustaw(nullptr);
+                 }
+                 else
+                 {
+                     poleGry_.at(0).at(1).at(nrKolumny)->ustaw(nullptr);
+                 }
+             }
+         }
+    }
+}
+void PoleBitwy::przesunDrugiGracz()
+{
+    for(int nrKolumny=0;nrKolumny<this->gra_->zwrocDlugoscLinii();nrKolumny++)
+    {
+        if(poleGry_.at(1).at(0).at(nrKolumny)->zwrocOddzial()== nullptr)
+        {
+            if(poleGry_.at(1).at(1).at(nrKolumny)->zwrocOddzial()!= nullptr)
+            {
+                poleGry_.at(1).at(0).at(nrKolumny)->ustaw(poleGry_.at(0).at(1).at(nrKolumny)->zwrocOddzial());
+                if(poleGry_.at(1).at(2).at(nrKolumny)->zwrocOddzial()!= nullptr)
+                {
+                    poleGry_.at(1).at(1).at(nrKolumny)->ustaw(poleGry_.at(0).at(0).at(nrKolumny)->zwrocOddzial());
+                    poleGry_.at(1).at(2).at(nrKolumny)->ustaw(nullptr);
+                }
+                else
+                {
+                    poleGry_.at(1).at(1).at(nrKolumny)->ustaw(nullptr);
+                }
+            }
+        }
+    }
+}
+void PoleBitwy::konsolidacjaPierwszyGracz(int nrSzeregu)
+{
+    if(nrSzeregu==0||nrSzeregu==gra_->zwrocDlugoscLinii()-1)
+    {
+        return;
+    }
+    if(nrSzeregu<=this->gra_->zwrocDlugoscLinii()/2)
+    {
+        int nrKolumny=nrSzeregu-1;
+        while(nrKolumny>0&&poleGry_.at(0).at(2).at(nrKolumny)->zwrocOddzial()!= nullptr)
+        {
+            int nrWiersza=2;
+            while(nrWiersza>=0&& poleGry_.at(0).at(nrWiersza).at(nrKolumny)->zwrocOddzial()!= nullptr)
+            {
+                poleGry_.at(0).at(nrWiersza).at(nrKolumny+1)->ustaw(poleGry_.at(0).at(nrWiersza).at(nrKolumny)->zwrocOddzial());
+                poleGry_.at(0).at(nrWiersza).at(nrKolumny)->ustaw(nullptr);
+                nrWiersza++;
+            }
+            nrKolumny--;
+        }
+
+    } else
+    {
+        int nrKolumny=nrSzeregu+1;
+        while(nrKolumny<this->gra_->zwrocDlugoscLinii()-1&&poleGry_.at(0).at(2).at(nrKolumny)->zwrocOddzial()!= nullptr)
+        {
+            int nrWiersza=2;
+            while(nrWiersza>=0&& poleGry_.at(0).at(nrWiersza).at(nrKolumny)->zwrocOddzial()!= nullptr)
+            {
+                poleGry_.at(0).at(nrWiersza).at(nrKolumny-1)->ustaw(poleGry_.at(0).at(nrWiersza).at(nrKolumny)->zwrocOddzial());
+                poleGry_.at(0).at(nrWiersza).at(nrKolumny)->ustaw(nullptr);
+                nrWiersza++;
+            }
+            nrKolumny++;
+        }
+
+    }
+}

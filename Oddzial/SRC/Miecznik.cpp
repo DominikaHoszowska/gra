@@ -6,5 +6,6 @@ Miecznik::Miecznik()
     obrona_=20;
     wytrzymalosc_=50;
     liczebnoscOddzialu_=200;
+    liczebnoscPoczatkowa=liczebnoscOddzialu_;
     zasieg_=1;
 }

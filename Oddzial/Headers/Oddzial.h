@@ -16,11 +16,13 @@ public:
     virtual Pole* zwrocPole();
     virtual bool czyPusty();
     virtual void ustawPole(Pole*);
+    virtual char OZNACZENIE;
 protected:
     int silaAtaku_;
     int obrona_;
     int wytrzymalosc_;
     int liczebnoscOddzialu_;
+    int liczebnoscPoczatkowa;
     int zasieg_;
     int obrazenia_;
     int straty_;

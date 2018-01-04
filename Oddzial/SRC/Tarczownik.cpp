@@ -6,5 +6,6 @@ Tarczownik::Tarczownik()
     obrona_=20;
     wytrzymalosc_=100;
     liczebnoscOddzialu_=100;
+    liczebnoscPoczatkowa=liczebnoscOddzialu_;
     zasieg_=2;
 }

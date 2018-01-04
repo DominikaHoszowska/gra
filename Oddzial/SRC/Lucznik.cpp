@@ -6,5 +6,6 @@ Lucznik::Lucznik()
     obrona_=5;
     wytrzymalosc_=50;
     liczebnoscOddzialu_=200;
+    liczebnoscPoczatkowa=liczebnoscOddzialu_;
     zasieg_=5;
 }

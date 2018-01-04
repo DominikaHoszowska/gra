@@ -7,4 +7,5 @@ Konny::Konny()
     wytrzymalosc_=70;
     liczebnoscOddzialu_=100;
     zasieg_=2;
+    liczebnoscPoczatkowa=liczebnoscOddzialu_;
 }

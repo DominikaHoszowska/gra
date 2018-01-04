@@ -8,6 +8,7 @@
 
 #include "Oddzial/Headers/Oddzial.h"
 #include "Gracz.h"
+#include "PoleBitwy.h"
 
 class Wojsko {
 public: 
@@ -23,6 +24,7 @@ private:
     void konsolidacjaSzeregow();
     void przesuniecieWojsk();
     bool czyPuste();
+    PoleBitwy* poleBitwy_;
     Gracz* gracz_;
 
 };

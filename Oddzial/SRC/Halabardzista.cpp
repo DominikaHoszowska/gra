@@ -7,4 +7,5 @@ Halabardzista::Halabardzista()
     wytrzymalosc_=40;
     liczebnoscOddzialu_=150;
     zasieg_=2;
+    liczebnoscPoczatkowa=liczebnoscOddzialu_;
 }

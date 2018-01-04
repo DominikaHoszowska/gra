@@ -17,6 +17,12 @@ public:
     virtual void ustaw(int,int,int,Oddzial*);
     virtual void wypisz();
     virtual void ustawGre(Gra*);
+    virtual bool czyPuste(int);
+    virtual void przesuniecieWojsk(int);
+    virtual void przesunPierwszyGracz();
+    virtual void przesunDrugiGracz();
+    virtual void konsolidacjaPierwszyGracz(int);
+    virtual void konsolidacjaDrugiGracz(int);
 private:
     Gra* gra_;
 

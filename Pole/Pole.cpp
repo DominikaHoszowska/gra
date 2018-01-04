@@ -1,4 +1,5 @@
 #include <stdexcept>
+#include <iostream>
 #include "Pole.h"
 
 Oddzial* Pole::zwrocOddzial() {
@@ -50,8 +51,26 @@ int Pole::odleglosc(Pole drugiePole)
     return odleglosc_;
 }
 
+void Pole::wypisz()
+{
+    std::cout<<this->zwrocOddzial()->OZNACZENIE<<":";
+    int liczba=this->zwrocOddzial()->liczebnoscOddzialu_/this->zwrocOddzial()->liczebnoscPoczatkowa;
+    if(liczba==1)
+    {
+        std::cout<<"00";
+        return;
+    }
+    if(liczba<10)
+    {
+        std::cout<<0<<liczba;
+        return;
+    }
+    std::cout<<liczba;
+
+}
 Pole::Pole(Oddzial *oddzial_) : oddzial_(oddzial_) {};
 Pole::Pole():
 {
     oddzial_= nullptr;
 }
+

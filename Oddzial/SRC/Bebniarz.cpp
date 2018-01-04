@@ -6,5 +6,6 @@ Bebniarz::Bebniarz()
     obrona_=1;
     wytrzymalosc_=50;
     liczebnoscOddzialu_=40;
+    liczebnoscPoczatkowa=liczebnoscOddzialu_;
     zasieg_=4;
 }

@@ -7,4 +7,5 @@ Kusznik::Kusznik()
     wytrzymalosc_=50;
     liczebnoscOddzialu_=200;
     zasieg_=1;
+    liczebnoscPoczatkowa=liczebnoscOddzialu_;
 }
