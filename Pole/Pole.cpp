@@ -10,32 +10,32 @@ void Pole::ustaw(Oddzial* oddzial)
     this->oddzial_=oddzial;
     oddzial->ustawPole(this);
 }
-int Pole::zwrocNrGracza()
+unsigned int Pole::zwrocNrGracza()
 {
     return this->nrGracza_;
 }
 
-int Pole::zwrocNrWiersza()
+unsigned int Pole::zwrocNrWiersza()
 {
-    return this->zwrocNrWiersza();
+    return this->nrWiersza_;
 }
-int Pole::zwrocNrKolumny()
+unsigned int Pole::zwrocNrKolumny()
 {
-    return this->zwrocNrKolumny();
+    return this->nrKolumny_;
 }
-void Pole::ustawNrGracza(int nrGracza)
+void Pole::ustawNrGracza(unsigned int nrGracza)
 {
     this->nrGracza_=nrGracza;
 }
-void Pole::ustawNrWiersza(int nrWiersza)
+void Pole::ustawNrWiersza(unsigned int nrWiersza)
 {
     this->nrWiersza_=nrWiersza;
 }
-void Pole::ustawNrKolumny(int nrKolumny)
+void Pole::ustawNrKolumny(unsigned int nrKolumny)
 {
     this->nrKolumny_-nrKolumny;
 }
-void Pole::ustawWspolrzedne(int nrGracza, int nrWiersza, int nrKolumny)
+void Pole::ustawWspolrzedne(unsigned int nrGracza,unsigned int nrWiersza,unsigned  int nrKolumny)
 {
     this->nrGracza_=nrGracza;
     this->nrWiersza_=nrWiersza;
@@ -54,7 +54,7 @@ int Pole::odleglosc(Pole drugiePole)
 void Pole::wypisz()
 {
     std::cout<<this->zwrocOddzial()->OZNACZENIE<<":";
-    int liczba=this->zwrocOddzial()->liczebnoscOddzialu_/this->zwrocOddzial()->liczebnoscPoczatkowa;
+    int liczba=this->zwrocOddzial()->zwrocliczebnosc()/this->zwrocOddzial()->zwrocLiczebnoscPoczatkowa();
     if(liczba==1)
     {
         std::cout<<"00";
@@ -73,4 +73,19 @@ Pole::Pole():
 {
     oddzial_= nullptr;
 }
+void Pole::usunOddzial()
+{
 
+    this->zwrocOddzial()->usun();
+    this->zmniejszMoralenaSasiednich();
+    this->oddzial_= nullptr;
+}
+PoleBitwy* Pole::zwrocPoleBitwy()
+{
+    return this->poleBitwy_;
+}
+
+void Pole::zmniejszMoralenaSasiednich()
+{
+    this->zwrocPoleBitwy()->zmniejszMorale(nrGracza_,nrKolumny_);
+}

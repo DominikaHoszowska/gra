@@ -9,13 +9,13 @@ void Gracz::atak() {
 Gracz::~Gracz() {
     delete wojsko_;
 }
-Gracz::Gracz(int id_) : id_(id_) {}
+Gracz::Gracz(unsigned int id_) : id_(id_) {}
 
 Wojsko* Gracz::zwrocWojsko()
 {
     return this->wojsko_;
 }
-int Gracz:: zwrocId()
+unsigned int Gracz:: zwrocId()
 {
     return this->id_;
 }

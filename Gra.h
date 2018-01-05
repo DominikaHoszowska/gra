@@ -6,15 +6,15 @@
 class Gra {
 public:
 
-    Gra(int liczbaTur_, int dlugoscLinii_);
+    Gra(unsigned int liczbaTur_, unsigned int dlugoscLinii_);
 
     bool czyKoniec();
 
     void rozegrajTure();
 
-    int zwrocLiczbeTur();
+    unsigned int zwrocLiczbeTur();
 
-    int zwrocDlugoscLinii();
+    unsigned int zwrocDlugoscLinii();
 
     void stworzPoleBitwy(char tabPole[6][zwrocDlugoscLinii()]);
 
@@ -31,9 +31,9 @@ public:
     virtual void wypisz();
     virtual static void wypiszPrzerywnik();
 private:
-    int liczbaTur_;
-    int aktualnyNrTury_;
-    int dlugoscLinii_;
+    unsigned int liczbaTur_;
+    unsigned int aktualnyNrTury_;
+    unsigned int dlugoscLinii_;
     PoleBitwy* poleBitwy_;
     Gracz* pierwszyGracz_;
     Gracz* drugiGracz_;

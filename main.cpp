@@ -11,7 +11,7 @@
 #include "Oddzial/Headers/Bebniarz.h"
 #include "Oddzial/Headers/Tarczownik.h"
 
-bool sprawdzDlugoscLinii(int dlugoscLinii)
+bool sprawdzDlugoscLinii(unsigned int dlugoscLinii)
 {
     if(dlugoscLinii>0 && dlugoscLinii%2==0)
     {
@@ -39,9 +39,9 @@ bool sprawdzZnak(char znak)
        ||znak==Tarczownik::OZNACZENIE
        ||znak=='X')
     {
-        return 1;
+        return true;
     }
-    return 0;
+    return false;
 }
 int main() {
 

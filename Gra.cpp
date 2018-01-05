@@ -12,12 +12,12 @@ bool Gra::czyKoniec() {
     if(this->poleBitwy_->czyPuste(0))
     {
         std::cout<<"Wygrał drugi gracz!!!";
-        return 1;
+        return true;
     }
     if(this->poleBitwy_->czyPuste(1))
     {
         std::cout<<"Wygrał pierwszy gracz!!!";
-        return 1;
+        return true;
     }
     if(aktualnyNrTury_==liczbaTur_)
     {
@@ -27,11 +27,11 @@ bool Gra::czyKoniec() {
     return false;
 }
 void Gra::inicjalizuj(char tabPole[6][zwrocDlugoscLinii()]) {
-    stworzPoleBitwy(tabPole[6][zwrocDlugoscLinii());
+    stworzPoleBitwy(tabPole[6][this->zwrocDlugoscLinii()]);
     stworzGraczy();
 }
 void Gra::stworzGraczy()
-{/*TODO
+{/*
     this->pierwszyGracz_= Gracz(0);
     this->drugiGracz_= Gracz(1);
     */
@@ -44,11 +44,11 @@ void Gra::rozegrajTure() {
     this->wypisz();
 
 }
-int Gra::zwrocLiczbeTur(){
+unsigned int Gra::zwrocLiczbeTur(){
     return this->liczbaTur_;
 }
 
-int Gra::zwrocDlugoscLinii()
+unsigned int Gra::zwrocDlugoscLinii()
 {
     return this->dlugoscLinii_;
 }
@@ -68,12 +68,11 @@ void Gra::stworzPoleBitwy(char tabPole[6][zwrocDlugoscLinii()]) {
 
     poleBitwy_ = new PoleBitwy(zwrocDlugoscLinii());
     poleBitwy_->ustawGre(this);
-    char znak;
-    for (int nrGracza = 0; nrGracza < 2; nrGracza++) {
-        for (int nrWiersza = 0; nrWiersza < 3; nrWiersza++) {
-            for(int nrKolumny=0;nrKolumny<zwrocDlugoscLinii();nrKolumny++) {
+    for (unsigned int nrGracza = 0; nrGracza < 2; nrGracza++) {
+        for (unsigned int nrWiersza = 0; nrWiersza < 3; nrWiersza++) {
+            for(unsigned int nrKolumny=0;nrKolumny<zwrocDlugoscLinii();nrKolumny++) {
                 Oddzial *oddzial = nullptr;
-                int wiersz=nrGracza*2+nrWiersza;
+                unsigned int wiersz=nrGracza*2+nrWiersza;
                 switch (tabPole[wiersz][nrKolumny]) {
                     case Tarczownik::OZNACZENIE:
                         oddzial = new Tarczownik();
@@ -103,7 +102,7 @@ void Gra::stworzPoleBitwy(char tabPole[6][zwrocDlugoscLinii()]) {
         }
     }
 }
-Gra::Gra(int liczbaTur, int dlugoscLinii) : liczbaTur_(liczbaTur), dlugoscLinii_(dlugoscLinii) {
+Gra::Gra(unsigned int liczbaTur, unsigned int dlugoscLinii) : liczbaTur_(liczbaTur), dlugoscLinii_(dlugoscLinii) {
     aktualnyNrTury_=0;
 }
 void Gra::wypisz()

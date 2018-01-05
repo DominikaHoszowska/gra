@@ -17,8 +17,7 @@ public:
     virtual Oddzial& kogoWspierac(Oddzial&);/*TODO*/
     virtual Oddzial& kogoAtakowac(Oddzial&);/*TODO*/
     virtual Gracz* zwrocGracza();
-
-private: 
+private:
     
 
     void konsolidacjaSzeregow();

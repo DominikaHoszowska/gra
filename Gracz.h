@@ -11,13 +11,13 @@
 class Gracz {
 public:
 
-    Gracz(int id_);
+    Gracz(unsigned int id_);
     virtual void atak();/*TODO*/
     virtual ~Gracz();
     virtual Wojsko* zwrocWojsko();
-    virtual int zwrocId();
+    virtual unsigned int zwrocId();
 private:
-    int id_;
+    unsigned int id_;
     Wojsko* wojsko_;
 
 };
