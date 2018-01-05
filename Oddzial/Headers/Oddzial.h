@@ -12,13 +12,16 @@ public:
 
     Oddzial();
 
-    virtual void atakuj();/*TODO*/
-    virtual void atakuj(PolePosilkow);/*TODO*/
+
     virtual void wspieraj(PolePierwszejLinii);/*TODO*/
     virtual void wspieraj(PoleDrugiejLinii);/*TODO*/
-    virtual void atakuj(PoleDrugiejLinii);
-    virtual void atakuj(PolePierwszejLinii);
-    virtual void wspieraj(PolePosilkow);
+    virtual void wspieraj(PolePosilkow);/*TODO*/
+    virtual void wspieraj();/*TODO*/
+    virtual void atakuj(PoleDrugiejLinii);/*TODO*/
+    virtual void atakuj(PolePierwszejLinii);/*TODO*/
+    virtual void atakuj();/*TODO*/
+    virtual void atakuj(PolePosilkow);/*TODO*/
+
     virtual Pole* zwrocPole();
     virtual int zwrocLiczebnoscPoczatkowa();
     virtual void ustawPole(Pole*);
@@ -30,7 +33,7 @@ public:
     virtual void wyzerujStraty();
     virtual void usun();
     virtual void zmniejszMorale();
-    virtual void przeliczStraty();/*zwraca prawde jezeli trzeba usunac oddzial bo liczba strat przewyzsza liczebnosc oddzialu*/
+    virtual void przeliczStraty();
 private:
 
     Pole* pole_;

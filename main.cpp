@@ -38,14 +38,13 @@ bool sprawdzZnak(char znak)
        ||znak==Bebniarz::OZNACZENIE
        ||znak==Tarczownik::OZNACZENIE
        ||znak=='X')
-    {
         return true;
-    }
+
     return false;
 }
 int main() {
 
-    int dlugoscLinii, liczbaTur;
+int dlugoscLinii, liczbaTur;
     std::cout << "Wprowadz dlugosc linii" << std::endl;
     std::cin >> dlugoscLinii;
 
@@ -70,7 +69,7 @@ int main() {
         for (int nrKolumny = 0; nrKolumny < dlugoscLinii; nrKolumny++) {
             std::cin >> znak;
             while (!sprawdzZnak(znak)) {
-                std::cout << "Wprowadz poprawny znak";
+                std::cout <<"Wprowadz poprawny znak";
                 std::cin >> znak;
             }
             tabPole[nrWiersza][nrKolumny] = znak;

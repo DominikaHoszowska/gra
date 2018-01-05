@@ -14,7 +14,7 @@ public:
     Pole();
     virtual Oddzial* zwrocOddzial();
     virtual PoleBitwy* zwrocPoleBitwy();
-    virtual void zmniejszMoralenaSasiednich();/*TODO*/
+    virtual void zmniejszMoralenaSasiednich();
     virtual void ustaw(Oddzial*);
     virtual unsigned int zwrocNrGracza();
     virtual unsigned int zwrocNrWiersza();

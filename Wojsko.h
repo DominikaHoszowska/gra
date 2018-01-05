@@ -14,17 +14,15 @@ class Wojsko {
 public: 
     
     void atak();
-    virtual Oddzial& kogoWspierac(Oddzial&);/*TODO*/
-    virtual Oddzial& kogoAtakowac(Oddzial&);/*TODO*/
+    virtual Oddzial& kogoWspierac(Oddzial*);/*TODO*/
+    virtual Oddzial& kogoAtakowac(Oddzial*);/*TODO*/
     virtual Gracz* zwrocGracza();
 private:
-    
 
-    void konsolidacjaSzeregow();
     void przesuniecieWojsk();
     bool czyPuste();
     PoleBitwy* poleBitwy_;
-    Gracz* gracz_;
+    Gracz* gracz_ ;
 
 };
 

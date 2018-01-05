@@ -9,11 +9,15 @@
 using namespace std;
 
 class PoleBitwy {
+private:
+    Gra* gra_;
+
+    vector<vector<vector<Pole*>>> poleGry_;
+
 public: 
 
     PoleBitwy(unsigned int dlugoscLinii);
-    vector<PolePierwszejLinii*> znajdzPolePrzeciwnika(const Gracz& );/*TODO*/
-    <vector<Pole*>> znajdzMojePole(const Gracz&);/*TODO*/
+
     virtual void ustaw(unsigned int,unsigned int,unsigned int,Oddzial*);
     virtual void wypisz();
     virtual void ustawGre(Gra*);
@@ -33,15 +37,12 @@ public:
     virtual void zmniejszMoralePierwszyGracz(unsigned int);
     virtual void zmniejszMoraleDrugiGracz(unsigned int);
     virtual void usunOddzialyIZmniejszMorale();
-    virtual void usunOddzialyIZmniejszMoralePierwszyGracz();/*TODO*/
-    virtual void usunOddzialyIZmniejszMoraleDrugiGracz();/*TODO*/
+    virtual void usunOddzialyIZmniejszMoralePierwszyGracz();
+    virtual void usunOddzialyIZmniejszMoraleDrugiGracz();
+    virtual void zamienTarczownik(unsigned int, unsigned int, unsigned int);
+    virtual void wsparcie();/*wywoluje funkcję wspieraj() dla kazdego oddzialu*/
 
 
-
-private:
-    Gra* gra_;
-
-    vector<vector<vector<Pole*>>> poleGry_;
 
 };
 

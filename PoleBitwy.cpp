@@ -3,15 +3,7 @@
 #include "PoleBitwy.h"
 #include "Pole/PoleDrugiejLinii.h"
 #include "Pole/PolePosilkow.h"
-/*
-vector<PolePierwszejLinii> PoleBitwy::znajdzPolePrzeciwnika(void Gracz) {
-    throw std::runtime_error("TODO");
-}
 
-vector<vector<Pole*>> PoleBitwy::znajdzMojePole(const Gracz&) {
-    throw std::runtime_error("TODO");
-}
-*/
 PoleBitwy::PoleBitwy(unsigned int dlugoscLinii):poleGry_(2) {
     for (int i = 0; i < dlugoscLinii; ++i){
         poleGry_.at(0).at(0).push_back(new PolePosilkow());
@@ -102,6 +94,10 @@ void PoleBitwy::przesunPierwszyGracz()
                  {
                      poleGry_.at(0).at(1).at(nrKolumny)->ustaw(poleGry_.at(0).at(0).at(nrKolumny)->zwrocOddzial());
                      poleGry_.at(0).at(0).at(nrKolumny)->ustaw(nullptr);
+                     if(poleGry_.at(0).at(1).at(nrKolumny)->zwrocOddzial()->OZNACZENIE=='T')
+                     {
+                         zamienTarczownik(0,2,nrKolumny);
+                     }
                  }
                  else
                  {
@@ -124,6 +120,10 @@ void PoleBitwy::przesunDrugiGracz()
                 {
                     poleGry_.at(1).at(1).at(nrKolumny)->ustaw(poleGry_.at(0).at(0).at(nrKolumny)->zwrocOddzial());
                     poleGry_.at(1).at(2).at(nrKolumny)->ustaw(nullptr);
+                    if(poleGry_.at(1).at(1).at(nrKolumny)->zwrocOddzial()->OZNACZENIE=='T')
+                    {
+                        zamienTarczownik(1,0,nrKolumny);
+                    }
                 }
                 else
                 {
@@ -133,6 +133,19 @@ void PoleBitwy::przesunDrugiGracz()
         }
     }
 }
+void PoleBitwy:: zamienTarczownik(unsigned int nrGracza, unsigned int nrWiersza, unsigned int nrKolumny)
+{
+    Pole poleZastepcze;
+    poleZastepcze.ustaw(poleGry_.at(nrGracza).at(nrWiersza).at(nrKolumny)->zwrocOddzial());
+    poleGry_.at(nrGracza).at(nrWiersza).at(nrKolumny)->zwrocOddzial()->
+            ustawPole(&poleZastepcze);
+    poleGry_.at(nrGracza).at(nrWiersza).at(nrKolumny)->
+            ustaw(poleGry_.at(nrGracza).at(1).at(nrKolumny)->zwrocOddzial());
+    poleGry_.at(nrGracza).at(1).at(nrKolumny)->zwrocOddzial()->ustawPole(poleGry_.at(nrGracza).at(1).at(nrKolumny));
+    poleGry_.at(nrGracza).at(1).at(nrKolumny)->ustaw(poleZastepcze.zwrocOddzial());
+    poleGry_.at(nrGracza).at(1).at(nrKolumny)->zwrocOddzial()->ustawPole(poleGry_.at(nrGracza).at(1).at(nrKolumny));
+}
+
 void PoleBitwy::konsolidacjaPierwszyGraczzNrSzeregu(unsigned int nrSzeregu)
 {
     if(nrSzeregu==0||nrSzeregu==gra_->zwrocDlugoscLinii()-1)
@@ -374,5 +387,18 @@ void PoleBitwy:: usunOddzialyIZmniejszMoraleDrugiGracz()
             }
         }
     }
-
+}
+void PoleBitwy::wsparcie()
+{
+    for(unsigned int nrGracza=0;nrGracza<=1;nrGracza++)
+    {
+        for(unsigned int nrWiersza=0;nrWiersza<=2;nrWiersza++)
+        {
+            for(unsigned int nrKolumny=0;nrKolumny<this->gra_->zwrocDlugoscLinii();nrKolumny++)
+            {
+                if(poleGry_.at(nrGracza).at(nrWiersza).at(nrKolumny)->zwrocOddzial()!= nullptr)
+                    poleGry_.at(nrGracza).at(nrWiersza).at(nrKolumny)->zwrocOddzial()->wspieraj();
+            }
+        }
+    }
 }
