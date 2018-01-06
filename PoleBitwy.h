@@ -19,7 +19,7 @@ public:
     PoleBitwy(unsigned int dlugoscLinii);
     /*WSPARCIE*/
     virtual void wsparcie();/*wywoluje funkcję wspieraj() dla kazdego oddzialu*/
-    /*KONSOLIDACJA*/
+    virtual void wycofajWsparcie();
     virtual void konsolidacjaPierwszyGraczzNrSzeregu(unsigned int);
     virtual void konsolidacjaDrugiGraczzNrSzeregu(unsigned int);
     virtual void konsolidacjaPierwszyGracz();

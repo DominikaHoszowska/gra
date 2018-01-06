@@ -1,8 +1,7 @@
 #include <stdexcept>
 #include <iostream>
 #include "PoleBitwy.h"
-#include "Pole/PoleDrugiejLinii.h"
-#include "Pole/PolePosilkow.h"
+
 
 /*WSPARCIE*/
 
@@ -20,7 +19,20 @@ void PoleBitwy::wsparcie()
         }
     }
 }
-
+void PoleBitwy::wycofajWsparcie()
+{
+    for(unsigned int nrGracza=0;nrGracza<=1;nrGracza++)
+    {
+        for(unsigned int nrWiersza=0;nrWiersza<=2;nrWiersza++)
+        {
+            for(unsigned int nrKolumny=0;nrKolumny<this->gra_->zwrocDlugoscLinii();nrKolumny++)
+            {
+                if(poleGry_.at(nrGracza).at(nrWiersza).at(nrKolumny)->zwrocOddzial()!= nullptr)
+                    poleGry_.at(nrGracza).at(nrWiersza).at(nrKolumny)->zwrocOddzial()->wycofajwsparcie();
+            }
+        }
+    }
+}
 
 
 

@@ -9,12 +9,36 @@ void Oddzial::wspieraj() {
 }
 void Oddzial::dodajwsparcie(Oddzial *oddzial)
 {
+    if(oddzial->OZNACZENIE==Tarczownik::OZNACZENIE)
+    {
+        this->obrona_*=1.5;
+    }
+    else
+    {
+        this->morale_*=1.5;
+    }
     this->wsparcie_.push_back(oddzial);
 }
 
+void Oddzial::wycofajwsparcie()
+{
+    while(!this->wsparcie_.empty())
+    {
+        if(this->wsparcie_.front()->OZNACZENIE==Bebniarz::OZNACZENIE)
+        {
+            this->straty_/=1.5;
+            this->morale_/=1.5;
+        }
+        else
+        {
+            this->obrona_/=1.5;
+        }
+        this->wsparcie_.pop_front();
+    }
+}
 
 /*ATAK*/
-
+/*
 void Oddzial::atakuj() {
     throw std::runtime_error("TODO");
 
@@ -29,7 +53,7 @@ virtual void Oddzial::atakuj(void PoleDrugiejLinii)
 virtual void Oddzial::atakuj(void PolePierwszejLinii) {
     throw std::runtime_error("TODO");
 }
-
+*/
 /*ZWRACANIE WARTOŚCI*/
 
 Pole*Oddzial:: zwrocPole()

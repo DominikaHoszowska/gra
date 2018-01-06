@@ -20,8 +20,7 @@ public:
     void dodajwsparcie(Oddzial*);
 
     virtual void wycofajwsparcie();/*TODO*/
-    virtual void wycofajwsparcie(Tarczownik*);/*TODO*/
-    virtual void wycofajwsparcie(Bebniarz*);/*TODO*/
+
 
     /*ATAK*/
 
@@ -55,7 +54,7 @@ private:
     Pole* pole_;
     Wojsko* wojsko_;
     int silaAtaku_;
-    int obrona_;
+    double obrona_;
     int wytrzymalosc_;
     int liczebnoscOddzialu_;
     int liczebnoscPoczatkowa;
