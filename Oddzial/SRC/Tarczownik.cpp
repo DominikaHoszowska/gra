@@ -9,3 +9,4 @@ Tarczownik::Tarczownik()
     liczebnoscPoczatkowa=liczebnoscOddzialu_;
     zasieg_=2;
 }
+

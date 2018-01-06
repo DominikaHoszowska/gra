@@ -14,6 +14,7 @@ class Tarczownik: public Wsparcie, public Zwarcie {
 public:
     Tarczownik();
 
+
 public:
     static const char OZNACZENIE = 'T';
 };

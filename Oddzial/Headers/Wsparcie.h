@@ -10,6 +10,7 @@
 
 
 class Wsparcie: public Oddzial {
+    void wspieraj();
 };
 
 #endif //_WSPARCIE_H

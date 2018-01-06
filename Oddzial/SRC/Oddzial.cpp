@@ -2,14 +2,12 @@
 #include <iostream>
 #include <stdexcept>
 
-void Oddzial::atakuj() {
-    throw std::runtime_error("TODO");
+/*Wsparcie*/
+
+void Oddzial::wspieraj()
+{
 
 }
-void Oddzial::atakuj(void PolePosilkow) {
-    throw std::runtime_error("TODO");
-}
-
 void Oddzial::wspieraj(void PolePierwszejLinii) {
     throw std::runtime_error("TODO");
 }
@@ -17,24 +15,55 @@ void Oddzial::wspieraj(void PolePierwszejLinii) {
 void Oddzial::wspieraj(void PoleDrugiejLinii) {
     throw std::runtime_error("TODO");
 }
+void Oddzial::wspieraj(void PolePosilkow) {
+    throw std::runtime_error("TODO");
+}
 
+/*ATAK*/
+
+void Oddzial::atakuj() {
+    throw std::runtime_error("TODO");
+
+}
+void Oddzial::atakuj(void PolePosilkow) {
+    throw std::runtime_error("TODO");
+}
 virtual void Oddzial::atakuj(void PoleDrugiejLinii)
 {
     throw std::runtime_error("TODO");
 }
-
 virtual void Oddzial::atakuj(void PolePierwszejLinii) {
     throw std::runtime_error("TODO");
 }
 
+/*ZWRACANIE WARTOŚCI*/
 
-virtual void Oddzial::wspieraj(void PolePosilkow) {
-    throw std::runtime_error("TODO");
-}
 Pole*Oddzial:: zwrocPole()
 {
     return this->pole_;
 }
+double Oddzial::zwrocMorale()
+{
+    return this->morale_;
+}
+int Oddzial::zwrocLiczebnoscPoczatkowa()
+{
+    return this->liczebnoscPoczatkowa;
+}
+int Oddzial::zwrocliczebnosc()
+{
+    return liczebnoscOddzialu_;
+}
+int Oddzial::zwrocZasieg()
+{
+    return this->zasieg_;
+}
+Wojsko* Oddzial::zwrocWojsko()
+{
+    return this->wojsko_;
+}
+
+/*INNE*/
 void Oddzial:: ustawPole(Pole* pole)
 {
     this->pole_=pole;
@@ -48,10 +77,7 @@ int Oddzial::obrazenia()
 {
     return (1+this->silaAtaku_)*this->liczebnoscOddzialu_;
 }
-double Oddzial::zwrocMorale()
-{
-    return this->morale_;
-}
+
 void Oddzial:: wyzerujStraty()
 {
     this->straty_=0;
@@ -100,12 +126,4 @@ void Oddzial::zmniejszMorale()
         return;
     }
 
-}
-int Oddzial::zwrocLiczebnoscPoczatkowa()
-{
-    return this->liczebnoscPoczatkowa;
-}
-int Oddzial::zwrocliczebnosc()
-{
-    return liczebnoscOddzialu_;
 }

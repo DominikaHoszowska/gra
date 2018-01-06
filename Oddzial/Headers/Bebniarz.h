@@ -13,9 +13,8 @@
 class Bebniarz: public Zasiegowa, public Wsparcie {
 public:
     Bebniarz();
-
-public:
     static const char OZNACZENIE ='B';
+
 };
 
 #endif //_BEBNIARZ_H
