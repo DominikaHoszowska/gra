@@ -12,7 +12,8 @@
 class Konny: public Zwarcie {
 public:
     Konny();
-
+    void atakujZPierwszejLinii()override;
+    void atakujZPierwszejLinii(Oddzial*);/*TODO*/
     static const char OZNACZENIE= 'K';
 };
 

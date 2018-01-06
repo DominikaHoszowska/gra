@@ -20,14 +20,9 @@ public:
     void dodajwsparcie(Oddzial*);
 
     virtual void wycofajwsparcie();/*TODO*/
-
-
     /*ATAK*/
-
-    virtual void atakuj(PoleDrugiejLinii);/*TODO*/
-    virtual void atakuj(PolePierwszejLinii);/*TODO*/
-    virtual void atakuj();/*TODO*/
-    virtual void atakuj(PolePosilkow);/*TODO*/
+    virtual void atakujZPierwszejLinii();/*TODO*/
+    virtual void atakujZDrugiejLinii();/*TODO*/
 
     /*ZWRACANIE WARTOŚCI*/
     virtual Pole* zwrocPole();
@@ -53,17 +48,18 @@ private:
 
     Pole* pole_;
     Wojsko* wojsko_;
+
+    double straty_;
+    double morale_;
+    list<Oddzial*> wsparcie_;
+
+protected:
     int silaAtaku_;
     double obrona_;
     int wytrzymalosc_;
     int liczebnoscOddzialu_;
     int liczebnoscPoczatkowa;
     int zasieg_;
-    double straty_;
-    double morale_;
-    int wspieraj_;
-    list<Oddzial*> wsparcie_;
-
 };
 
 #endif //_ODDZIAL_H

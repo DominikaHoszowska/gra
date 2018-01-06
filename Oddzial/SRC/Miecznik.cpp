@@ -9,3 +9,9 @@ Miecznik::Miecznik()
     liczebnoscPoczatkowa=liczebnoscOddzialu_;
     zasieg_=1;
 }
+void Miecznik::atakujZPierwszejLinii() {
+    Oddzial* przeciwnik=zwrocWojsko()->znajdzPrzeciwnika(this,this->zwrocZasieg());
+    atakujZPierwszejLinii(przeciwnik);
+}
+
+

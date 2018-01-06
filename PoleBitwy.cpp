@@ -34,6 +34,21 @@ void PoleBitwy::wycofajWsparcie()
     }
 }
 
+/*ATAK*/
+void PoleBitwy::atak()
+{
+    for(unsigned int nrGracza=0;nrGracza<=1;nrGracza++)
+    {
+        for(unsigned int nrWiersza=0;nrWiersza<=2;nrWiersza++)
+        {
+            for(unsigned int nrKolumny=0;nrKolumny<this->gra_->zwrocDlugoscLinii();nrKolumny++)
+            {
+                if(poleGry_.at(nrGracza).at(nrWiersza).at(nrKolumny)->zwrocOddzial()!= nullptr)
+                    poleGry_.at(nrGracza).at(nrWiersza).at(nrKolumny)->atakuj();
+            }
+        }
+    }
+}
 
 
 PoleBitwy::PoleBitwy(unsigned int dlugoscLinii):poleGry_(2) {

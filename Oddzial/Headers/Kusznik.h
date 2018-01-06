@@ -13,6 +13,10 @@ class Kusznik: public Zasiegowa {
 public:
     Kusznik();
     static const char OZNACZENIE= 'k';
+    void atakujZPierwszejLinii()override;
+    void atakujZDrugiejLinii()override;/*TODO*/
+    void atakujZPierwszejLinii(Oddzial*);/*TODO*/
+    void atakujZDrugiejLinii(Oddzial*);/*TODO*/
 };
 
 #endif //_KUSZNIK_H

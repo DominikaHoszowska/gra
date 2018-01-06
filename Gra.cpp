@@ -39,8 +39,7 @@ void Gra::stworzGraczy()
 void Gra::rozegrajTure() {
     this->aktualnyNrTury_+=1;
     this->poleBitwy_->wsparcie();
-    this->pierwszyGracz_->atak();
-    this->drugiGracz_->atak();
+    this->poleBitwy_->atak();
     this->poleBitwy_->wycofajWsparcie();
     this->poleBitwy_->aktualizujstan();
     this->wypisz();

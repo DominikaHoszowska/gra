@@ -9,3 +9,12 @@ Kusznik::Kusznik()
     zasieg_=1;
     liczebnoscPoczatkowa=liczebnoscOddzialu_;
 }
+void Kusznik::atakujZPierwszejLinii() {
+    Oddzial *przeciwnik = zwrocWojsko()->znajdzPrzeciwnika(this, this->zwrocZasieg());
+    atakujZPierwszejLinii(przeciwnik);
+}
+void Kusznik::atakujZDrugiejLinii()
+{
+    Oddzial *przeciwnik = zwrocWojsko()->znajdzPrzeciwnika(this, this->zwrocZasieg());
+    atakujZDrugiejLinii(przeciwnik);
+}

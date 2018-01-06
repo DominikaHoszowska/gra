@@ -1,6 +1,6 @@
 #include "../Headers/Oddzial.h"
 #include <iostream>
-#include <stdexcept>
+
 
 /*Wsparcie*/
 
@@ -38,22 +38,7 @@ void Oddzial::wycofajwsparcie()
 }
 
 /*ATAK*/
-/*
-void Oddzial::atakuj() {
-    throw std::runtime_error("TODO");
 
-}
-void Oddzial::atakuj(void PolePosilkow) {
-    throw std::runtime_error("TODO");
-}
-virtual void Oddzial::atakuj(void PoleDrugiejLinii)
-{
-    throw std::runtime_error("TODO");
-}
-virtual void Oddzial::atakuj(void PolePierwszejLinii) {
-    throw std::runtime_error("TODO");
-}
-*/
 /*ZWRACANIE WARTOŚCI*/
 
 Pole*Oddzial:: zwrocPole()

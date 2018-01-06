@@ -12,6 +12,8 @@ public:
 
     Pole(Oddzial *oddzial_);
     Pole();
+    /*ATAK*/
+    virtual void atakuj();/*DO POPRAWY*/
     virtual Oddzial* zwrocOddzial();
     virtual PoleBitwy* zwrocPoleBitwy();
     virtual void zmniejszMoralenaSasiednich();

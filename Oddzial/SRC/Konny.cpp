@@ -9,3 +9,9 @@ Konny::Konny()
     zasieg_=2;
     liczebnoscPoczatkowa=liczebnoscOddzialu_;
 }
+void Konny::atakujZPierwszejLinii() {
+    Oddzial* przeciwnik=zwrocWojsko()->znajdzPrzeciwnika(this,this->zwrocZasieg());
+    atakujZPierwszejLinii(przeciwnik);
+}
+
+

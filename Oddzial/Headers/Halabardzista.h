@@ -15,6 +15,9 @@ public:
 
 public:
     static const char OZNACZENIE = 'H';
+    void atakujZPierwszejLinii()override;
+    void atakujZPierwszejLinii(Oddzial*);/*TODO*/
+
 };
 
 #endif //_HALABARDZISTA_H

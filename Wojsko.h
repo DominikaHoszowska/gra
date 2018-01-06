@@ -9,6 +9,7 @@
 #include "Oddzial/Headers/Oddzial.h"
 #include "Gracz.h"
 #include "PoleBitwy.h"
+#include "Oddzial/Headers/Lucznik.h"
 
 class Wojsko {
 public: 
@@ -18,8 +19,9 @@ public:
     virtual void kogoWspieracPierwszyGracz(Pole*);
     virtual void kogoWspieracDrugiGracz(Pole*);
     PoleBitwy* zwrocPoleBitwy();
-    virtual Oddzial& kogoAtakowac(Oddzial*);/*TODO*/
     virtual Gracz* zwrocGracza();
+    virtual Oddzial* znajdzPrzeciwnika(Oddzial*,int);
+
 private:
 
     void przesuniecieWojsk();

@@ -17,10 +17,8 @@ void Wojsko::kogoWspieracPierwszyGracz(Pole *pole) {
     }
     if (pole->zwrocNrKolumny() != 0&&mojePoleBitwy.at(2).at(pole->zwrocNrKolumny() - 1)->zwrocOddzial() != nullptr)
     {
-        mojePoleBitwy.at(2).at(pole->zwrocNrKolumny() - 1)->zwrocOddzial() != nullptr)
             mojePoleBitwy.at(2).at(pole->zwrocNrKolumny() - 1)->zwrocOddzial()->dodajwsparcie(pole->zwrocOddzial());
             return;
-
     }
 
     if (mojePoleBitwy.at(2).at(pole->zwrocNrKolumny() + 1)->zwrocOddzial() != nullptr &&
@@ -31,7 +29,7 @@ void Wojsko::kogoWspieracPierwszyGracz(Pole *pole) {
 
     }
         pole->zwrocOddzial()->dodajwsparcie(pole->zwrocOddzial());
-        return;
+
 
     }
 void Wojsko::kogoWspieracDrugiGracz(Pole *pole)
@@ -43,7 +41,6 @@ void Wojsko::kogoWspieracDrugiGracz(Pole *pole)
     }
     if (pole->zwrocNrKolumny() != 0&&mojePoleBitwy.at(0).at(pole->zwrocNrKolumny() - 1)->zwrocOddzial() != nullptr)
     {
-        mojePoleBitwy.at(0).at(pole->zwrocNrKolumny() - 1)->zwrocOddzial() != nullptr)
         mojePoleBitwy.at(0).at(pole->zwrocNrKolumny() - 1)->zwrocOddzial()->dodajwsparcie(pole->zwrocOddzial());
         return;
 
@@ -56,13 +53,9 @@ void Wojsko::kogoWspieracDrugiGracz(Pole *pole)
         return;
     }
     pole->zwrocOddzial()->dodajwsparcie(pole->zwrocOddzial());
-    return;
 
 }
 
-void Wojsko::atak() {
-    throw std::runtime_error("TODO");
-}
 
 Oddzial& Wojsko::kogoAtakowac(Oddzial* oddzial) {
 

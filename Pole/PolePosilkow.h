@@ -2,7 +2,6 @@
  * Project Untitled
  */
 
-
 #ifndef _POLEPOSILKOW_H
 #define _POLEPOSILKOW_H
 
@@ -10,6 +9,7 @@
 
 
 class PolePosilkow: public Pole {
+    void atakuj() override ;
 };
 
 #endif //_POLEPOSILKOW_H

@@ -17,9 +17,18 @@ private:
 public: 
 
     PoleBitwy(unsigned int dlugoscLinii);
+
     /*WSPARCIE*/
+
     virtual void wsparcie();/*wywoluje funkcję wspieraj() dla kazdego oddzialu*/
     virtual void wycofajWsparcie();
+
+    /*ATAK*/
+    void atak();/*wywoluje funkcje atakuj() dla kazdego oddzialu;
+
+
+    /*KONSOLIDACJA*/
+
     virtual void konsolidacjaPierwszyGraczzNrSzeregu(unsigned int);
     virtual void konsolidacjaDrugiGraczzNrSzeregu(unsigned int);
     virtual void konsolidacjaPierwszyGracz();
@@ -27,14 +36,21 @@ public:
     virtual void konsolidacjaSzeregow();
     virtual void zamienTarczownik(unsigned int, unsigned int, unsigned int);
 
-    virtual void ustaw(unsigned int,unsigned int,unsigned int,Oddzial*);
-    virtual void wypisz();
-    virtual void ustawGre(Gra*);
-    virtual bool czyPuste(unsigned int);/*dostaje nr Gracza i sprawdza czy ma puste wojsko*/
+    /*PRZESUWANIE*/
+
     virtual void przesuniecieWojsk(unsigned int);
     virtual void przesunPierwszyGracz();
     virtual void przesunOddzialy();/*Zleca przesuniecie oddzialow obydwu graczy*/
     virtual void przesunDrugiGracz();
+
+    /*USTAWIANIE GRY*/
+
+    virtual void ustaw(unsigned int,unsigned int,unsigned int,Oddzial*);
+    virtual void ustawGre(Gra*);
+
+
+    virtual void wypisz();
+    virtual bool czyPuste(unsigned int);/*dostaje nr Gracza i sprawdza czy ma puste wojsko*/
     virtual void aktualizujstan();
     virtual void przeliczStraty();
     virtual void zmniejszMorale(unsigned int,unsigned int);
