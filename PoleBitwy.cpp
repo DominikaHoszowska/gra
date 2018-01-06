@@ -4,6 +4,26 @@
 #include "Pole/PoleDrugiejLinii.h"
 #include "Pole/PolePosilkow.h"
 
+/*WSPARCIE*/
+
+void PoleBitwy::wsparcie()
+{
+    for(unsigned int nrGracza=0;nrGracza<=1;nrGracza++)
+    {
+        for(unsigned int nrWiersza=0;nrWiersza<=2;nrWiersza++)
+        {
+            for(unsigned int nrKolumny=0;nrKolumny<this->gra_->zwrocDlugoscLinii();nrKolumny++)
+            {
+                if(poleGry_.at(nrGracza).at(nrWiersza).at(nrKolumny)->zwrocOddzial()!= nullptr)
+                    poleGry_.at(nrGracza).at(nrWiersza).at(nrKolumny)->zwrocOddzial()->wspieraj();
+            }
+        }
+    }
+}
+
+
+
+
 PoleBitwy::PoleBitwy(unsigned int dlugoscLinii):poleGry_(2) {
     for (int i = 0; i < dlugoscLinii; ++i){
         poleGry_.at(0).at(0).push_back(new PolePosilkow());
@@ -388,17 +408,11 @@ void PoleBitwy:: usunOddzialyIZmniejszMoraleDrugiGracz()
         }
     }
 }
-void PoleBitwy::wsparcie()
+vector<vector<Pole*>> PoleBitwy::zwrocPoleBitwy(unsigned int nrGracza)
 {
-    for(unsigned int nrGracza=0;nrGracza<=1;nrGracza++)
-    {
-        for(unsigned int nrWiersza=0;nrWiersza<=2;nrWiersza++)
-        {
-            for(unsigned int nrKolumny=0;nrKolumny<this->gra_->zwrocDlugoscLinii();nrKolumny++)
-            {
-                if(poleGry_.at(nrGracza).at(nrWiersza).at(nrKolumny)->zwrocOddzial()!= nullptr)
-                    poleGry_.at(nrGracza).at(nrWiersza).at(nrKolumny)->zwrocOddzial()->wspieraj();
-            }
-        }
-    }
+    return poleGry_.at(nrGracza);
+}
+Gra* PoleBitwy::zwrocGre()
+{
+    return this->gra_;
 }

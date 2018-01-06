@@ -14,7 +14,10 @@ class Wojsko {
 public: 
     
     void atak();
-    virtual Oddzial& kogoWspierac(Oddzial*);/*TODO*/
+    virtual void kogoWspierac(Pole*);
+    virtual void kogoWspieracPierwszyGracz(Pole*);
+    virtual void kogoWspieracDrugiGracz(Pole*);
+    PoleBitwy* zwrocPoleBitwy();
     virtual Oddzial& kogoAtakowac(Oddzial*);/*TODO*/
     virtual Gracz* zwrocGracza();
 private:

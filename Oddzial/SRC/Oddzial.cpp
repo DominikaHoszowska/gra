@@ -4,20 +4,14 @@
 
 /*Wsparcie*/
 
-void Oddzial::wspieraj()
+void Oddzial::wspieraj() {
+
+}
+void Oddzial::dodajwsparcie(Oddzial *oddzial)
 {
-
-}
-void Oddzial::wspieraj(void PolePierwszejLinii) {
-    throw std::runtime_error("TODO");
+    this->wsparcie_.push_back(oddzial);
 }
 
-void Oddzial::wspieraj(void PoleDrugiejLinii) {
-    throw std::runtime_error("TODO");
-}
-void Oddzial::wspieraj(void PolePosilkow) {
-    throw std::runtime_error("TODO");
-}
 
 /*ATAK*/
 

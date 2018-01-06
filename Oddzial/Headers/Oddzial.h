@@ -16,10 +16,9 @@ public:
     Oddzial();
 
     /*WSPARCIE*/
-    virtual void wspieraj(PolePierwszejLinii);/*TODO*/
-    virtual void wspieraj(PoleDrugiejLinii);/*TODO*/
-    virtual void wspieraj(PolePosilkow);/*TODO*/
     virtual void wspieraj();/*TODO*/
+    void dodajwsparcie(Oddzial*);
+
     virtual void wycofajwsparcie();/*TODO*/
     virtual void wycofajwsparcie(Tarczownik*);/*TODO*/
     virtual void wycofajwsparcie(Bebniarz*);/*TODO*/

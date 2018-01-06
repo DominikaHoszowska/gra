@@ -17,6 +17,15 @@ private:
 public: 
 
     PoleBitwy(unsigned int dlugoscLinii);
+    /*WSPARCIE*/
+    virtual void wsparcie();/*wywoluje funkcję wspieraj() dla kazdego oddzialu*/
+    /*KONSOLIDACJA*/
+    virtual void konsolidacjaPierwszyGraczzNrSzeregu(unsigned int);
+    virtual void konsolidacjaDrugiGraczzNrSzeregu(unsigned int);
+    virtual void konsolidacjaPierwszyGracz();
+    virtual void konsolidacjaDrugiGracz();
+    virtual void konsolidacjaSzeregow();
+    virtual void zamienTarczownik(unsigned int, unsigned int, unsigned int);
 
     virtual void ustaw(unsigned int,unsigned int,unsigned int,Oddzial*);
     virtual void wypisz();
@@ -26,11 +35,6 @@ public:
     virtual void przesunPierwszyGracz();
     virtual void przesunOddzialy();/*Zleca przesuniecie oddzialow obydwu graczy*/
     virtual void przesunDrugiGracz();
-    virtual void konsolidacjaPierwszyGraczzNrSzeregu(unsigned int);
-    virtual void konsolidacjaDrugiGraczzNrSzeregu(unsigned int);
-    virtual void konsolidacjaPierwszyGracz();
-    virtual void konsolidacjaDrugiGracz();
-    virtual void konsolidacjaSzeregow();
     virtual void aktualizujstan();
     virtual void przeliczStraty();
     virtual void zmniejszMorale(unsigned int,unsigned int);
@@ -39,10 +43,9 @@ public:
     virtual void usunOddzialyIZmniejszMorale();
     virtual void usunOddzialyIZmniejszMoralePierwszyGracz();
     virtual void usunOddzialyIZmniejszMoraleDrugiGracz();
-    virtual void zamienTarczownik(unsigned int, unsigned int, unsigned int);
-    virtual void wsparcie();/*wywoluje funkcję wspieraj() dla kazdego oddzialu*/
 
-
+    vector<vector<Pole*>> zwrocPoleBitwy(unsigned int);
+    virtual Gra* zwrocGre();
 
 };
 

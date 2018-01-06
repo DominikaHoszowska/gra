@@ -2,5 +2,5 @@
 
 void Wsparcie::wspieraj()
 {
-    this->zwrocWojsko()->kogoWspierac(this);
+    this->zwrocWojsko()->kogoWspierac(this->zwrocPole());
 }
