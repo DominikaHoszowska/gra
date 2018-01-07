@@ -1,27 +1,35 @@
 #ifndef _POLEBITWY_H
 #define _POLEBITWY_H
+
+
+class PoleBitwy;
+
 #include <vector>
 #include <map>
-#include "Pole/PolePierwszejLinii.h"
-#include "Gracz.h"
-#include "Gra.h"
 
-using namespace std;
+
+//#include "Pole/PolePierwszejLinii.h"
+
+#include "Gracz.h"
+
+#include "Gra.h"
 
 class PoleBitwy {
 private:
+    using wiersz_t = std::vector<Pole*>;
+    using wojsko_t = std::vector<wiersz_t>;
     Gra* gra_;
 
-    vector<vector<vector<Pole*>>> poleGry_;
+    std::vector<wojsko_t> poleGry_;
 
-public: 
+public:
 
     PoleBitwy(unsigned int dlugoscLinii);
 
     /*WSPARCIE*/
 
-    virtual void wsparcie();/*wywoluje funkcję wspieraj() dla kazdego oddzialu*/
-    virtual void wycofajWsparcie();
+      void wsparcie();/*wywoluje funkcję wspieraj() dla kazdego oddzialu*/
+      void wycofajWsparcie();
 
     /*ATAK*/
     void atak();/*wywoluje funkcje atakuj() dla kazdego oddzialu;
@@ -29,41 +37,41 @@ public:
 
     /*KONSOLIDACJA*/
 
-    virtual void konsolidacjaPierwszyGraczzNrSzeregu(unsigned int);
-    virtual void konsolidacjaDrugiGraczzNrSzeregu(unsigned int);
-    virtual void konsolidacjaPierwszyGracz();
-    virtual void konsolidacjaDrugiGracz();
-    virtual void konsolidacjaSzeregow();
-    virtual void zamienTarczownik(unsigned int, unsigned int, unsigned int);
+      void konsolidacjaPierwszyGraczzNrSzeregu(unsigned int);
+      void konsolidacjaDrugiGraczzNrSzeregu(unsigned int);
+      void konsolidacjaPierwszyGracz();
+      void konsolidacjaDrugiGracz();
+      void konsolidacjaSzeregow();
+      void zamienTarczownik(unsigned int, unsigned int, unsigned int);
 
     /*PRZESUWANIE*/
 
-    virtual void przesuniecieWojsk(unsigned int);
-    virtual void przesunPierwszyGracz();
-    virtual void przesunOddzialy();/*Zleca przesuniecie oddzialow obydwu graczy*/
-    virtual void przesunDrugiGracz();
+      void przesuniecieWojsk(unsigned int);
+      void przesunPierwszyGracz();
+      void przesunOddzialy();/*Zleca przesuniecie oddzialow obydwu graczy*/
+      void przesunDrugiGracz();
 
     /*USTAWIANIE GRY*/
 
-    virtual void ustaw(unsigned int,unsigned int,unsigned int,Oddzial*);
-    virtual void ustawGre(Gra*);
+      void ustaw(unsigned int,unsigned int,unsigned int,Oddzial*);
+    void ustawGre(Gra*);
 
 
-    virtual void wypisz();
-    virtual bool czyPuste(unsigned int);/*dostaje nr Gracza i sprawdza czy ma puste wojsko*/
-    virtual void aktualizujstan();
-    virtual void przeliczStraty();
-    virtual void zmniejszMorale(unsigned int,unsigned int);
-    virtual void zmniejszMoralePierwszyGracz(unsigned int);
-    virtual void zmniejszMoraleDrugiGracz(unsigned int);
-    virtual void usunOddzialyIZmniejszMorale();
-    virtual void usunOddzialyIZmniejszMoralePierwszyGracz();
-    virtual void usunOddzialyIZmniejszMoraleDrugiGracz();
+      void wypisz();
+      bool czyPuste(unsigned int);/*dostaje nr Gracza i sprawdza czy ma puste wojsko*/
+      void aktualizujstan();
+      void przeliczStraty();
+      void zmniejszMorale(unsigned int,unsigned int);
+      void zmniejszMoralePierwszyGracz(unsigned int);
+      void zmniejszMoraleDrugiGracz(unsigned int);
+      void usunOddzialyIZmniejszMorale();
+      void usunOddzialyIZmniejszMoralePierwszyGracz();
+      void usunOddzialyIZmniejszMoraleDrugiGracz();
 
-    vector<vector<Pole*>> zwrocPoleBitwy(unsigned int);
-    vector<Pole*> zwrocPolePrzeciwnika(unsigned int);/*zwraca pole pierwszej linii gracza*/
-    vector<Pole*> zwrocPolePrzeciwnikaDrugaLinia(unsigned int);
-    virtual Gra* zwrocGre();
+    std::vector<std::vector<Pole*>> zwrocPoleBitwy(unsigned int);
+    std::vector<Pole*> zwrocPolePrzeciwnika(unsigned int);/*zwraca pole pierwszej linii gracza*/
+    std::vector<Pole*> zwrocPolePrzeciwnikaDrugaLinia(unsigned int);
+      Gra* zwrocGre();
 
 };
 

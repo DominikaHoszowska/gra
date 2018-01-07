@@ -51,7 +51,7 @@ void PoleBitwy::atak()
 }
 
 /*ZWRACANIE WARTOSCI*/
-vector<Pole*> PoleBitwy::zwrocPolePrzeciwnika(unsigned int nrGracza)
+std::vector<Pole*> PoleBitwy::zwrocPolePrzeciwnika(unsigned int nrGracza)
 {
     if(nrGracza==0)
     {
@@ -60,7 +60,7 @@ vector<Pole*> PoleBitwy::zwrocPolePrzeciwnika(unsigned int nrGracza)
     return poleGry_.at(1).at(0);
 }
 
-vector<Pole*> PoleBitwy::zwrocPolePrzeciwnikaDrugaLinia(unsigned int nrGracza)
+std::vector<Pole*> PoleBitwy::zwrocPolePrzeciwnikaDrugaLinia(unsigned int nrGracza)
 {
     if(nrGracza==0)
     {
@@ -73,14 +73,14 @@ vector<Pole*> PoleBitwy::zwrocPolePrzeciwnikaDrugaLinia(unsigned int nrGracza)
 
 
 PoleBitwy::PoleBitwy(unsigned int dlugoscLinii):poleGry_(2) {
-    for (int i = 0; i < dlugoscLinii; ++i){
-        poleGry_.at(0).at(0).push_back(new PolePosilkow());
-        poleGry_.at(0).at(1).push_back(new PoleDrugiejLinii());
-        poleGry_.at(0).at(2).push_back(new PolePierwszejLinii());
-        poleGry_.at(1).at(0).push_back(new PolePierwszejLinii());
-        poleGry_.at(1).at(1).push_back(new PoleDrugiejLinii());
-        poleGry_.at(1).at(2).push_back(new PolePosilkow());
-    }
+//    for (int i = 0; i < dlugoscLinii; ++i){
+//        poleGry_.at(0).at(0).push_back(new PolePosilkow());
+//        poleGry_.at(0).at(1).push_back(new PoleDrugiejLinii());
+//        poleGry_.at(0).at(2).push_back(new PolePierwszejLinii());
+//        poleGry_.at(1).at(0).push_back(new PolePierwszejLinii());
+//        poleGry_.at(1).at(1).push_back(new PoleDrugiejLinii());
+//        poleGry_.at(1).at(2).push_back(new PolePosilkow());
+//    }
 }
 void PoleBitwy:: ustaw(unsigned int nrGracza,unsigned int nrWiersza,unsigned int nrKolumny,Oddzial* oddzial)
 {
@@ -456,7 +456,7 @@ void PoleBitwy:: usunOddzialyIZmniejszMoraleDrugiGracz()
         }
     }
 }
-vector<vector<Pole*>> PoleBitwy::zwrocPoleBitwy(unsigned int nrGracza)
+std::vector<std::vector<Pole*>> PoleBitwy::zwrocPoleBitwy(unsigned int nrGracza)
 {
     return poleGry_.at(nrGracza);
 }

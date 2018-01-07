@@ -10,9 +10,9 @@ Konny::Konny()
     liczebnoscPoczatkowa=liczebnoscOddzialu_;
 }
 void Konny::atakujZPierwszejLinii() {
-    Oddzial* przeciwnik=zwrocWojsko()->znajdzPrzeciwnika(this,this->zwrocZasieg());
-    if(przeciwnik!= nullptr)
-        atakujZPierwszejLinii(przeciwnik);
+//    Oddzial* przeciwnik=zwrocWojsko()->znajdzPrzeciwnika(this,this->zwrocZasieg());
+//    if(przeciwnik!= nullptr)
+//        atakujZPierwszejLinii(przeciwnik);
 }
 void Konny::atakujZPierwszejLinii(Oddzial *przeciwnik)
 {

@@ -26,16 +26,10 @@ bool Gra::czyKoniec() {
     }
     return false;
 }
-void Gra::inicjalizuj(char tabPole[6][zwrocDlugoscLinii()]) {
-    stworzPoleBitwy(tabPole[6][this->zwrocDlugoscLinii()]);
-    stworzGraczy();
+void Gra::inicjalizuj(std::vector<std::vector<char>> tabPole) {
+//    stworzPoleBitwy(tabPole);
 }
-void Gra::stworzGraczy()
-{/*
-    this->pierwszyGracz_= Gracz(0);
-    this->drugiGracz_= Gracz(1);
-    */
-}
+
 void Gra::rozegrajTure() {
     this->aktualnyNrTury_+=1;
     this->poleBitwy_->wsparcie();
@@ -59,13 +53,13 @@ PoleBitwy* Gra::zwrocPoleBitwy()
 }
 Gracz* Gra:: zwrocPierwszegoGracza()
 {
-    return this->pierwszyGracz_;
+    return pierwszyGracz_;
 }
 Gracz* Gra::zwrocDrugiegoGracza()
 {
-    return this->drugiGracz_;
+    return drugiGracz_;
 }
-void Gra::stworzPoleBitwy(char tabPole[6][zwrocDlugoscLinii()]) {
+void Gra::stworzPoleBitwy(char* tabPole[6]) {
 
     poleBitwy_ = new PoleBitwy(zwrocDlugoscLinii());
     poleBitwy_->ustawGre(this);
@@ -79,19 +73,19 @@ void Gra::stworzPoleBitwy(char tabPole[6][zwrocDlugoscLinii()]) {
                         oddzial = new Tarczownik();
                         break;
                     case Lucznik::OZNACZENIE:
-                        oddzial=new Lucznik;
+                        oddzial=new Lucznik();
                         break;
                     case Kusznik::OZNACZENIE:
-                        oddzial=new Kusznik;
+                        oddzial=new Kusznik();
                         break;
                     case Halabardzista::OZNACZENIE:
-                        oddzial= new Halabardzista;
+                        oddzial= new Halabardzista();
                         break;
                     case Konny::OZNACZENIE:
-                        oddzial=new Konny;
+                        oddzial=new Konny();
                         break;
                     case Bebniarz::OZNACZENIE:
-                        oddzial=new Bebniarz;
+                        oddzial = new Bebniarz();
                         break;
                     case 'X':
                         break;
@@ -103,7 +97,10 @@ void Gra::stworzPoleBitwy(char tabPole[6][zwrocDlugoscLinii()]) {
         }
     }
 }
-Gra::Gra(unsigned int liczbaTur, unsigned int dlugoscLinii) : liczbaTur_(liczbaTur), dlugoscLinii_(dlugoscLinii) {
+Gra::Gra(unsigned int liczbaTur, unsigned int dlugoscLinii) :
+        liczbaTur_(liczbaTur), dlugoscLinii_(dlugoscLinii),
+        pierwszyGracz_(new Gracz(0)), drugiGracz_(new Gracz(1))
+{
     aktualnyNrTury_=0;
 }
 void Gra::wypisz()
@@ -112,9 +109,16 @@ void Gra::wypisz()
     std::cout<<"Tura "<<this->aktualnyNrTury_<<" z "<<liczbaTur_<<std::endl;
     this->poleBitwy_->wypisz();
 }
-static void Gra::wypiszPrzerywnik()
+void Gra::wypiszPrzerywnik()
 {
     for (int a=0;a<20;a++)
         std::cout<<"-";
-    std::cout<<endl;
+    std::cout<<std::endl;
+}
+
+
+Gra::~Gra(){
+    delete poleBitwy_;
+    delete pierwszyGracz_;
+    delete drugiGracz_;
 }

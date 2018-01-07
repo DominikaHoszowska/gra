@@ -10,11 +10,11 @@ void PolePierwszejLinii::atakuj()
 {
     this->zwrocOddzial()->atakujZPierwszejLinii();
 }
-double PolePierwszejLinii::zwrocObrone(Lucznik* lucznik)
-{
-    return lucznik->obrona()*0.5;
-}
-double PolePierwszejLinii::zwrocObrone(Kusznik * kusznik)
-{
-    return kusznik->obrona()*0.7;
-}
+//double PolePierwszejLinii::zwrocObrone(Lucznik* lucznik)
+//{
+//    return lucznik->obrona()*0.5;
+//}
+//double PolePierwszejLinii::zwrocObrone(Kusznik * kusznik)
+//{
+//    return kusznik->obrona()*0.7;
+//}

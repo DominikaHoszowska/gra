@@ -9,7 +9,7 @@
 #include "Oddzial.h"
 
 
-class Wsparcie: public Oddzial {
+class Wsparcie: virtual public Oddzial {
     void wspieraj();
 };
 

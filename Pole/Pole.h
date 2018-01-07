@@ -1,5 +1,8 @@
 #ifndef _POLE_H
 #define _POLE_H
+class Pole;
+
+#include "../PoleBitwy.h"
 #include "../Oddzial/Headers/Oddzial.h"
 
 class Pole {
@@ -11,17 +14,16 @@ private:
     unsigned int nrKolumny_;
 public:
 
-    Pole(Oddzial *oddzial_);
-    Pole();
+    Pole(Oddzial* = nullptr);
     /*ATAK*/
-    virtual void atakuj();/*DO POPRAWY*/
-    virtual Oddzial* zwrocOddzial();
-    virtual PoleBitwy* zwrocPoleBitwy();
+    virtual void atakuj(){}
+    Oddzial* zwrocOddzial();
+    PoleBitwy* zwrocPoleBitwy();
     virtual void zmniejszMoralenaSasiednich();
     virtual void ustaw(Oddzial*);
-    virtual unsigned int zwrocNrGracza();
-    virtual unsigned int zwrocNrWiersza();
-    virtual unsigned int zwrocNrKolumny();
+    unsigned int zwrocNrGracza();
+    unsigned int zwrocNrWiersza();
+    unsigned int zwrocNrKolumny();
     virtual void ustawNrGracza(unsigned int);
     virtual void ustawNrWiersza(unsigned int);
     virtual void ustawNrKolumny(unsigned int);
@@ -29,8 +31,8 @@ public:
     virtual int odleglosc(Pole drugiePole);
     virtual void wypisz();
     virtual void usunOddzial();
-    virtual double zwrocObrone(Lucznik*);
-    virtual double zwrocObrone(Kusznik*);
+//    virtual double zwrocObrone(Lucznik*);
+//    virtual double zwrocObrone(Kusznik*);
 };
 
 #endif //_POLE_H

@@ -9,7 +9,7 @@
 #include "Oddzial.h"
 
 
-class Zwarcie: public Oddzial {
+class Zwarcie: virtual public Oddzial {
 public:
     void atakujZDrugiejLinii() override ;
 };

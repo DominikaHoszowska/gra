@@ -1,10 +1,6 @@
-/**
- * Project Untitled
- */
-
 #ifndef _POLEPOSILKOW_H
 #define _POLEPOSILKOW_H
-
+class PolePosilkow;
 #include "Pole.h"
 
 

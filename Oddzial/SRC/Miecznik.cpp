@@ -10,9 +10,9 @@ Miecznik::Miecznik()
     zasieg_=1;
 }
 void Miecznik::atakujZPierwszejLinii() {
-    Oddzial* przeciwnik=zwrocWojsko()->znajdzPrzeciwnika(this,this->zwrocZasieg());
-    if(przeciwnik!= nullptr)
-        atakujZPierwszejLinii(przeciwnik);
+//    Oddzial* przeciwnik=zwrocWojsko()->znajdzPrzeciwnika(this,this->zwrocZasieg());
+//    if(przeciwnik!= nullptr)
+//        atakujZPierwszejLinii(przeciwnik);
 }
 void Miecznik::atakujZPierwszejLinii(Oddzial *przeciwnik)
 {

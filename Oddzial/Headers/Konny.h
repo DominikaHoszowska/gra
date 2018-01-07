@@ -7,6 +7,7 @@
 #define _KONNY_H
 
 #include "Zwarcie.h"
+#include "Zasiegowa.h"
 
 
 class Konny: public Zwarcie {

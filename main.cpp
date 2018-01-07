@@ -76,7 +76,7 @@ int dlugoscLinii, liczbaTur;
         }
     }
 
-    gra.inicjalizuj(tabPole);
+//    gra.inicjalizuj(tabPole);
 
     while(!gra.czyKoniec())
     {

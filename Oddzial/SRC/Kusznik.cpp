@@ -10,15 +10,15 @@ Kusznik::Kusznik()
     liczebnoscPoczatkowa=liczebnoscOddzialu_;
 }
 void Kusznik::atakujZPierwszejLinii() {
-    Oddzial *przeciwnik = zwrocWojsko()->znajdzPrzeciwnika(this, this->zwrocZasieg());
-    if(przeciwnik!= nullptr)
-        atakujZPierwszejLinii(przeciwnik);
+//    Oddzial *przeciwnik = zwrocWojsko()->znajdzPrzeciwnika(this, this->zwrocZasieg());
+//    if(przeciwnik!= nullptr)
+//        atakujZPierwszejLinii(przeciwnik);
 }
 void Kusznik::atakujZDrugiejLinii()
 {
-    Oddzial *przeciwnik = zwrocWojsko()->znajdzPrzeciwnika(this, this->zwrocZasieg());
-    if(przeciwnik!= nullptr)
-        atakujZDrugiejLinii(przeciwnik);
+//    Oddzial *przeciwnik = zwrocWojsko()->znajdzPrzeciwnika(this, this->zwrocZasieg());
+//    if(przeciwnik!= nullptr)
+//        atakujZDrugiejLinii(przeciwnik);
 }
 void Kusznik::atakujZPierwszejLinii(Oddzial* przeciwnik)
 {
@@ -32,5 +32,5 @@ void Kusznik::atakujZDrugiejLinii(Oddzial *przeciwnik)
 }
 double Kusznik::zwrocObrone()
 {
-    return this->zwrocPole()->zwrocObrone(this);
+//    return this->zwrocPole()->zwrocObrone(this);
 }

@@ -1,12 +1,17 @@
 #ifndef _ODDZIAL_H
 #define _ODDZIAL_H
-#include "../../Pole/PolePosilkow.h"
-#include "../../Pole/PolePierwszejLinii.h"
-#include "../../Pole/PoleDrugiejLinii.h"
+class Oddzial;
+
 #include "../../Pole/Pole.h"
 #include "../../Wojsko.h"
-#include "Tarczownik.h"
-#include "Bebniarz.h"
+
+
+//#include "Tarczownik.h"
+//#include "Bebniarz.h"
+
+//#include "../../Pole/PolePosilkow.h"
+//#include "../../Pole/PolePierwszejLinii.h"
+//#include "../../Pole/PoleDrugiejLinii.h"
 
 #include <list>
 class Oddzial {
@@ -38,7 +43,7 @@ public:
 
     /*INNE*/
     virtual void ustawPole(Pole*);
-    virtual char OZNACZENIE;
+    char OZNACZENIE;
     virtual void wyzerujStraty();
     virtual void usun();
     virtual void zmniejszMorale();
@@ -51,7 +56,7 @@ private:
     Wojsko* wojsko_;
     double straty_;
     double morale_;
-    list<Oddzial*> wsparcie_;
+    std::list<Oddzial*> wsparcie_;
 
 protected:
     int silaAtaku_;

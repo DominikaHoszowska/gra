@@ -1,5 +1,6 @@
 #include <stdexcept>
 #include <iostream>
+
 #include "Pole.h"
 
 Oddzial* Pole::zwrocOddzial() {
@@ -69,10 +70,8 @@ void Pole::wypisz()
 
 }
 Pole::Pole(Oddzial *oddzial_) : oddzial_(oddzial_) {};
-Pole::Pole():
-{
-    oddzial_= nullptr;
-}
+
+
 void Pole::usunOddzial()
 {
 
@@ -89,11 +88,11 @@ void Pole::zmniejszMoralenaSasiednich()
 {
     this->zwrocPoleBitwy()->zmniejszMorale(nrGracza_,nrKolumny_);
 }
-double zwrocObrone(Lucznik* lucznik)
-{
-    return lucznik->obrona();
-}
-double zwrocObrone(Kusznik* kusznik)
-{
-    return kusznik->obrona();
-}
+//double zwrocObrone(Lucznik* lucznik)
+//{
+//    return lucznik->obrona();
+//}
+//double zwrocObrone(Kusznik* kusznik)
+//{
+//    return kusznik->obrona();
+//}

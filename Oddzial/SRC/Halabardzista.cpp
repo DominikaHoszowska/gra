@@ -10,9 +10,9 @@ Halabardzista::Halabardzista()
     liczebnoscPoczatkowa=liczebnoscOddzialu_;
 }
 void Halabardzista::atakujZPierwszejLinii() {
-    Oddzial* przeciwnik=zwrocWojsko()->znajdzPrzeciwnika(this,this->zwrocZasieg());
-    if(przeciwnik!= nullptr)
-        atakujZPierwszejLinii(przeciwnik);
+//    Oddzial* przeciwnik = zwrocWojsko()->znajdzPrzeciwnika(this,this->zwrocZasieg());
+//    if(przeciwnik!= nullptr)
+//        atakujZPierwszejLinii(przeciwnik);
 }
 void Halabardzista::atakujZPierwszejLinii(Oddzial * przeciwnik)
 {

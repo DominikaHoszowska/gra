@@ -42,6 +42,7 @@ set(SOURCE_FILES
         Oddzial/Headers/Zasiegowa.h
         Oddzial/SRC/Zwarcie.cpp
         Oddzial/Headers/Zwarcie.h
-        main.cpp)
+        main.cpp
+        )
 
 add_executable(Model ${SOURCE_FILES})

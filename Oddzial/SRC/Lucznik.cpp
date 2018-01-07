@@ -11,15 +11,15 @@ Lucznik::Lucznik()
 }
 void Lucznik::atakujZPierwszejLinii()
 {
-    Oddzial* przeciwnik=zwrocWojsko()->znajdzPrzeciwnika(this,this->zwrocZasieg());
-    if(przeciwnik!= nullptr)
-        atakujZPierwszejLinii(przeciwnik);
+//    Oddzial* przeciwnik=zwrocWojsko()->znajdzPrzeciwnika(this,this->zwrocZasieg());
+//    if(przeciwnik!= nullptr)
+//        atakujZPierwszejLinii(przeciwnik);
 }
 void Lucznik::atakujZDrugiejLinii()
 {
-    Oddzial* przeciwnik=zwrocWojsko()->znajdzPrzeciwnika(this,this->zwrocZasieg());
-    if(przeciwnik!= nullptr)
-        atakujZDrugiejLinii(przeciwnik);
+//    Oddzial* przeciwnik=zwrocWojsko()->znajdzPrzeciwnika(this,this->zwrocZasieg());
+//    if(przeciwnik!= nullptr)
+//        atakujZDrugiejLinii(przeciwnik);
 }
 void Lucznik::atakujZPierwszejLinii(Oddzial* przeciwnik)
 {
@@ -33,5 +33,7 @@ void Lucznik::atakujZDrugiejLinii(Oddzial *przeciwnik)
 }
 double Lucznik::zwrocObrone()
 {
-    return this->zwrocPole()->zwrocObrone(this);
+    //TODO
+    throw std::runtime_error("Not implemented");
+//    return this->zwrocPole()->zwrocObrone(this);
 }
