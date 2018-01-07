@@ -18,10 +18,10 @@ public:
     virtual void kogoWspierac(Pole*);
     virtual void kogoWspieracPierwszyGracz(Pole*);
     virtual void kogoWspieracDrugiGracz(Pole*);
-    PoleBitwy* zwrocPoleBitwy();
     virtual Gracz* zwrocGracza();
     virtual Oddzial* znajdzPrzeciwnika(Oddzial*,int);
-
+    virtual Oddzial* znajdzPrzeciwnika(Lucznik*,int);
+    PoleBitwy* zwrocPoleBitwy();
 private:
 
     void przesuniecieWojsk();

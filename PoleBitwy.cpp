@@ -50,6 +50,27 @@ void PoleBitwy::atak()
     }
 }
 
+/*ZWRACANIE WARTOSCI*/
+vector<Pole*> PoleBitwy::zwrocPolePrzeciwnika(unsigned int nrGracza)
+{
+    if(nrGracza==0)
+    {
+        return poleGry_.at(0).at(2);
+    }
+    return poleGry_.at(1).at(0);
+}
+
+vector<Pole*> PoleBitwy::zwrocPolePrzeciwnikaDrugaLinia(unsigned int nrGracza)
+{
+    if(nrGracza==0)
+    {
+        return poleGry_.at(0).at(1);
+    }
+    return poleGry_.at(1).at(1);
+}
+
+
+
 
 PoleBitwy::PoleBitwy(unsigned int dlugoscLinii):poleGry_(2) {
     for (int i = 0; i < dlugoscLinii; ++i){

@@ -40,7 +40,8 @@ void Oddzial::wycofajwsparcie()
 /*ATAK*/
 void Oddzial::zadajObrazenia(double obrazenia)
 {
-    double straty= obrazenia*(1-(zwrocMorale()/(1-zwrocMorale())))/(wytrzymalosc_*(1+zwrocObrone()));
+    double straty= obrazenia*(1-(zwrocMorale()/(1-zwrocMorale())))
+                   /(wytrzymalosc_*(1+zwrocObrone()));
     if(straty>0)
     {
         this->straty_+=straty;
@@ -89,6 +90,10 @@ double Oddzial::zwrocObrone()
 {
     return this->obrona_;
 }
+
+
+
+
 /*INNE*/
 void Oddzial:: ustawPole(Pole* pole)
 {

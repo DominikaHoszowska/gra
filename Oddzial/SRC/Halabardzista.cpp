@@ -11,7 +11,8 @@ Halabardzista::Halabardzista()
 }
 void Halabardzista::atakujZPierwszejLinii() {
     Oddzial* przeciwnik=zwrocWojsko()->znajdzPrzeciwnika(this,this->zwrocZasieg());
-    atakujZPierwszejLinii(przeciwnik);
+    if(przeciwnik!= nullptr)
+        atakujZPierwszejLinii(przeciwnik);
 }
 void Halabardzista::atakujZPierwszejLinii(Oddzial * przeciwnik)
 {

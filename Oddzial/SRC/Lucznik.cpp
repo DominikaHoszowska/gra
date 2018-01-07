@@ -12,12 +12,14 @@ Lucznik::Lucznik()
 void Lucznik::atakujZPierwszejLinii()
 {
     Oddzial* przeciwnik=zwrocWojsko()->znajdzPrzeciwnika(this,this->zwrocZasieg());
-    atakujZPierwszejLinii(przeciwnik);
+    if(przeciwnik!= nullptr)
+        atakujZPierwszejLinii(przeciwnik);
 }
 void Lucznik::atakujZDrugiejLinii()
 {
     Oddzial* przeciwnik=zwrocWojsko()->znajdzPrzeciwnika(this,this->zwrocZasieg());
-    atakujZDrugiejLinii(przeciwnik);
+    if(przeciwnik!= nullptr)
+        atakujZDrugiejLinii(przeciwnik);
 }
 void Lucznik::atakujZPierwszejLinii(Oddzial* przeciwnik)
 {

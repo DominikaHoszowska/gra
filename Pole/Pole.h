@@ -1,6 +1,7 @@
 #ifndef _POLE_H
 #define _POLE_H
 #include "../Oddzial/Headers/Oddzial.h"
+
 class Pole {
 private:
     Oddzial* oddzial_;

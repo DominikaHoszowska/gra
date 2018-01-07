@@ -61,6 +61,8 @@ public:
     virtual void usunOddzialyIZmniejszMoraleDrugiGracz();
 
     vector<vector<Pole*>> zwrocPoleBitwy(unsigned int);
+    vector<Pole*> zwrocPolePrzeciwnika(unsigned int);/*zwraca pole pierwszej linii gracza*/
+    vector<Pole*> zwrocPolePrzeciwnikaDrugaLinia(unsigned int);
     virtual Gra* zwrocGre();
 
 };

@@ -11,14 +11,15 @@ Konny::Konny()
 }
 void Konny::atakujZPierwszejLinii() {
     Oddzial* przeciwnik=zwrocWojsko()->znajdzPrzeciwnika(this,this->zwrocZasieg());
-    atakujZPierwszejLinii(przeciwnik);
+    if(przeciwnik!= nullptr)
+        atakujZPierwszejLinii(przeciwnik);
 }
 void Konny::atakujZPierwszejLinii(Oddzial *przeciwnik)
 {
     double obrazenia=(1+silaAtaku_)*zwrocliczebnosc();
     przeciwnik->zadajObrazenia(obrazenia);
 }
-void Konny::atakujZPierwszejLinii(Zasiegowa *przeciwnik)
+void Konny::atakujZPierwszehLinii(Zasiegowa *przeciwnik)
 {
     double obrazenia=(1+1.25*silaAtaku_)*zwrocliczebnosc();
     przeciwnik->zadajObrazenia(obrazenia);

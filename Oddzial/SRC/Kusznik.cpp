@@ -11,12 +11,14 @@ Kusznik::Kusznik()
 }
 void Kusznik::atakujZPierwszejLinii() {
     Oddzial *przeciwnik = zwrocWojsko()->znajdzPrzeciwnika(this, this->zwrocZasieg());
-    atakujZPierwszejLinii(przeciwnik);
+    if(przeciwnik!= nullptr)
+        atakujZPierwszejLinii(przeciwnik);
 }
 void Kusznik::atakujZDrugiejLinii()
 {
     Oddzial *przeciwnik = zwrocWojsko()->znajdzPrzeciwnika(this, this->zwrocZasieg());
-    atakujZDrugiejLinii(przeciwnik);
+    if(przeciwnik!= nullptr)
+        atakujZDrugiejLinii(przeciwnik);
 }
 void Kusznik::atakujZPierwszejLinii(Oddzial* przeciwnik)
 {
