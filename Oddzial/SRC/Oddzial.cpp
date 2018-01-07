@@ -1,5 +1,5 @@
 #include "../Headers/Oddzial.h"
-#include <iostream>
+
 
 
 /*Wsparcie*/
@@ -38,6 +38,22 @@ void Oddzial::wycofajwsparcie()
 }
 
 /*ATAK*/
+void Oddzial::zadajObrazenia(double obrazenia)
+{
+    double straty= obrazenia*(1-(zwrocMorale()/(1-zwrocMorale())))/(wytrzymalosc_*(1+zwrocObrone()));
+    if(straty>0)
+    {
+        this->straty_+=straty;
+    }
+}
+void Oddzial::atakujZPierwszejLinii()
+{
+    /*nie atakuj*/
+}
+void Oddzial::atakujZDrugiejLinii()
+{
+    /*nie atakuj*/
+}
 
 /*ZWRACANIE WARTOŚCI*/
 
@@ -65,7 +81,14 @@ Wojsko* Oddzial::zwrocWojsko()
 {
     return this->wojsko_;
 }
-
+double Oddzial::obrona()
+{
+    return this->obrona_;
+}
+double Oddzial::zwrocObrone()
+{
+    return this->obrona_;
+}
 /*INNE*/
 void Oddzial:: ustawPole(Pole* pole)
 {
@@ -75,10 +98,6 @@ void Oddzial:: ustawPole(Pole* pole)
 Oddzial::Oddzial()
 {
     morale_=0;
-}
-int Oddzial::obrazenia()
-{
-    return (1+this->silaAtaku_)*this->liczebnoscOddzialu_;
 }
 
 void Oddzial:: wyzerujStraty()
@@ -95,17 +114,6 @@ void Oddzial::przeliczStraty()
         wyzerujStraty();
 }
 
-double Oddzial::stratyZadanePrzezOddzial(Oddzial* atakowanyOddzial)
-{
-    double straty=(this->obrazenia()*(1-2*atakowanyOddzial->morale_)
-                         /(1-atakowanyOddzial->morale_))
-                         /(atakowanyOddzial->wytrzymalosc_*(1+atakowanyOddzial->obrona_));
-    if(straty>0)
-    {
-        return straty;
-    }
-    return 0;
-}
 void Oddzial::usun()
 {
     delete this;

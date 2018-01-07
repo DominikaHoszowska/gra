@@ -18,3 +18,17 @@ void Kusznik::atakujZDrugiejLinii()
     Oddzial *przeciwnik = zwrocWojsko()->znajdzPrzeciwnika(this, this->zwrocZasieg());
     atakujZDrugiejLinii(przeciwnik);
 }
+void Kusznik::atakujZPierwszejLinii(Oddzial* przeciwnik)
+{
+    double obrazenia=(1+silaAtaku_)*zwrocliczebnosc();
+    przeciwnik->zadajObrazenia(obrazenia);
+}
+void Kusznik::atakujZDrugiejLinii(Oddzial *przeciwnik)
+{
+    double obrazenia=(1+silaAtaku_)*zwrocliczebnosc();
+    przeciwnik->zadajObrazenia(obrazenia);
+}
+double Kusznik::zwrocObrone()
+{
+    return this->zwrocPole()->zwrocObrone(this);
+}

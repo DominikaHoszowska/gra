@@ -28,6 +28,8 @@ public:
     virtual int odleglosc(Pole drugiePole);
     virtual void wypisz();
     virtual void usunOddzial();
+    virtual double zwrocObrone(Lucznik*);
+    virtual double zwrocObrone(Kusznik*);
 };
 
 #endif //_POLE_H

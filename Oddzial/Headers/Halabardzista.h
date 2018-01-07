@@ -7,6 +7,7 @@
 #define _HALABARDZISTA_H
 
 #include "Zwarcie.h"
+#include "Konny.h"
 
 
 class Halabardzista: public Zwarcie {
@@ -16,7 +17,8 @@ public:
 public:
     static const char OZNACZENIE = 'H';
     void atakujZPierwszejLinii()override;
-    void atakujZPierwszejLinii(Oddzial*);/*TODO*/
+    virtual void atakujZPierwszejLinii(Oddzial*);
+    void atakujZPierwszejLinii(Konny*);
 
 };
 

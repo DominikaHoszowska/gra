@@ -14,6 +14,7 @@ public:
     Konny();
     void atakujZPierwszejLinii()override;
     void atakujZPierwszejLinii(Oddzial*);/*TODO*/
+    void atakujZPierwszehLinii(Zasiegowa*);/*TODO*/
     static const char OZNACZENIE= 'K';
 };
 

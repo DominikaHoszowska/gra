@@ -89,3 +89,11 @@ void Pole::zmniejszMoralenaSasiednich()
 {
     this->zwrocPoleBitwy()->zmniejszMorale(nrGracza_,nrKolumny_);
 }
+double zwrocObrone(Lucznik* lucznik)
+{
+    return lucznik->obrona();
+}
+double zwrocObrone(Kusznik* kusznik)
+{
+    return kusznik->obrona();
+}

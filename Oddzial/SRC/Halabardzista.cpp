@@ -13,5 +13,16 @@ void Halabardzista::atakujZPierwszejLinii() {
     Oddzial* przeciwnik=zwrocWojsko()->znajdzPrzeciwnika(this,this->zwrocZasieg());
     atakujZPierwszejLinii(przeciwnik);
 }
+void Halabardzista::atakujZPierwszejLinii(Oddzial * przeciwnik)
+{
+    double obrazenia=(1+silaAtaku_)*zwrocliczebnosc();
+    przeciwnik->zadajObrazenia(obrazenia);
+}
+void Halabardzista::atakujZPierwszejLinii(Konny * konik)
+
+{
+    double obrazenia=(1+1.5*silaAtaku_)*zwrocliczebnosc();
+    konik->zadajObrazenia(obrazenia);
+}
 
 

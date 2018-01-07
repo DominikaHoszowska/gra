@@ -21,8 +21,9 @@ public:
 
     virtual void wycofajwsparcie();/*TODO*/
     /*ATAK*/
-    virtual void atakujZPierwszejLinii();/*TODO*/
-    virtual void atakujZDrugiejLinii();/*TODO*/
+    virtual void atakujZPierwszejLinii();
+    virtual void atakujZDrugiejLinii();/
+    virtual void zadajObrazenia(double);
 
     /*ZWRACANIE WARTOŚCI*/
     virtual Pole* zwrocPole();
@@ -31,13 +32,13 @@ public:
     virtual double zwrocMorale();
     virtual int zwrocliczebnosc();
     virtual Wojsko* zwrocWojsko();
+    virtual double zwrocObrone();
+    virtual double obrona();
 
 
     /*INNE*/
     virtual void ustawPole(Pole*);
     virtual char OZNACZENIE;
-    virtual int obrazenia();
-    virtual double stratyZadanePrzezOddzial(Oddzial*);
     virtual void wyzerujStraty();
     virtual void usun();
     virtual void zmniejszMorale();
@@ -48,7 +49,6 @@ private:
 
     Pole* pole_;
     Wojsko* wojsko_;
-
     double straty_;
     double morale_;
     list<Oddzial*> wsparcie_;

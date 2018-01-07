@@ -13,5 +13,10 @@ void Miecznik::atakujZPierwszejLinii() {
     Oddzial* przeciwnik=zwrocWojsko()->znajdzPrzeciwnika(this,this->zwrocZasieg());
     atakujZPierwszejLinii(przeciwnik);
 }
+void Miecznik::atakujZPierwszejLinii(Oddzial *przeciwnik)
+{
+    double obrazenia=(1+silaAtaku_)*zwrocliczebnosc();
+    przeciwnik->zadajObrazenia(obrazenia);
+}
 
 

@@ -13,5 +13,15 @@ void Konny::atakujZPierwszejLinii() {
     Oddzial* przeciwnik=zwrocWojsko()->znajdzPrzeciwnika(this,this->zwrocZasieg());
     atakujZPierwszejLinii(przeciwnik);
 }
+void Konny::atakujZPierwszejLinii(Oddzial *przeciwnik)
+{
+    double obrazenia=(1+silaAtaku_)*zwrocliczebnosc();
+    przeciwnik->zadajObrazenia(obrazenia);
+}
+void Konny::atakujZPierwszejLinii(Zasiegowa *przeciwnik)
+{
+    double obrazenia=(1+1.25*silaAtaku_)*zwrocliczebnosc();
+    przeciwnik->zadajObrazenia(obrazenia);
+}
 
 

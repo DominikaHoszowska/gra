@@ -14,9 +14,10 @@ public:
     Lucznik();
     static const char OZNACZENIE = 'L';
     void atakujZPierwszejLinii()override;
-    void atakujZPierwszejLinii(Oddzial*);/*TODO*/
-    void atakujZDrugiejLinii()override;/*TODO*/
-    void atakujZDrugiejLinii(Oddzial*);/*TODO*/
+    void atakujZPierwszejLinii(Oddzial*);
+    void atakujZDrugiejLinii()override;
+    void atakujZDrugiejLinii(Oddzial*);
+    double zwrocObrone() override;
 };
 
 #endif //_LUCZNIK_H
