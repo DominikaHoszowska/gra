@@ -1,6 +1,6 @@
 #include "../Headers/Lucznik.h"
 
-Lucznik::Lucznik()
+Lucznik::Lucznik():Oddzial(), Zasiegowa()
 {
     silaAtaku_=30;
     obrona_=5;

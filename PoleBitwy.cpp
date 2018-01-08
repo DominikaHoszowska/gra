@@ -1,6 +1,9 @@
-#include <stdexcept>
 #include <iostream>
+#include <vector>
 #include "PoleBitwy.h"
+#include "Pole/PolePosilkow.h"
+#include "Pole/PoleDrugiejLinii.h"
+#include "Pole/PolePierwszejLinii.h"
 
 
 /*WSPARCIE*/
@@ -69,23 +72,26 @@ std::vector<Pole*> PoleBitwy::zwrocPolePrzeciwnikaDrugaLinia(unsigned int nrGrac
     return poleGry_.at(1).at(1);
 }
 
-
-
-
 PoleBitwy::PoleBitwy(unsigned int dlugoscLinii):poleGry_(2) {
-//    for (int i = 0; i < dlugoscLinii; ++i){
-//        poleGry_.at(0).at(0).push_back(new PolePosilkow());
-//        poleGry_.at(0).at(1).push_back(new PoleDrugiejLinii());
-//        poleGry_.at(0).at(2).push_back(new PolePierwszejLinii());
-//        poleGry_.at(1).at(0).push_back(new PolePierwszejLinii());
-//        poleGry_.at(1).at(1).push_back(new PoleDrugiejLinii());
-//        poleGry_.at(1).at(2).push_back(new PolePosilkow());
-//    }
+    for(int i=0;i<3;i++) {
+        poleGry_.at(0).push_back(std::vector<Pole *>(0));
+        poleGry_.at(1).push_back(std::vector<Pole *>(0));
+    }
+    for (int i = 0; i < dlugoscLinii; ++i){
+        poleGry_.at(0).at(0).push_back(new PolePosilkow());
+        poleGry_.at(0).at(0).at(i)->ustawNrGracza(0);
+
+        poleGry_.at(0).at(1).push_back(new PoleDrugiejLinii());
+        poleGry_.at(0).at(2).push_back(new PolePierwszejLinii());
+        poleGry_.at(1).at(0).push_back(new PolePierwszejLinii());
+        poleGry_.at(1).at(1).push_back(new PoleDrugiejLinii());
+        poleGry_.at(1).at(2).push_back(new PolePosilkow());
+    }
+    -
 }
 void PoleBitwy:: ustaw(unsigned int nrGracza,unsigned int nrWiersza,unsigned int nrKolumny,Oddzial* oddzial)
 {
-    poleGry_.at(nrGracza).at(nrWiersza).at(nrKolumny)->ustaw(oddzial);
-
+        poleGry_.at(nrGracza).at(nrWiersza).at(nrKolumny)->ustaw(oddzial);
 }
 void PoleBitwy::ustawGre(Gra* gra)
 {

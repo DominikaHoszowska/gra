@@ -15,12 +15,19 @@ private:
 public:
 
     Pole(Oddzial* = nullptr);
+
     /*ATAK*/
     virtual void atakuj(){}
+
+    /*USTAWIANIE*/
+
+    virtual void ustaw(Oddzial*);
+
+
     Oddzial* zwrocOddzial();
     PoleBitwy* zwrocPoleBitwy();
     virtual void zmniejszMoralenaSasiednich();
-    virtual void ustaw(Oddzial*);
+
     unsigned int zwrocNrGracza();
     unsigned int zwrocNrWiersza();
     unsigned int zwrocNrKolumny();

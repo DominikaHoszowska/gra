@@ -1,6 +1,6 @@
 #include "../Headers/Tarczownik.h"
 
-Tarczownik::Tarczownik()
+Tarczownik::Tarczownik():Oddzial(), Zwarcie(), Wsparcie()
 {
     silaAtaku_=0;
     obrona_=20;

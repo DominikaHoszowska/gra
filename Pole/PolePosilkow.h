@@ -5,7 +5,9 @@ class PolePosilkow;
 
 
 class PolePosilkow: public Pole {
+public:
     void atakuj() override ;
+
 };
 
 #endif //_POLEPOSILKOW_H

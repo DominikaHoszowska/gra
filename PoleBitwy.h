@@ -24,7 +24,8 @@ private:
 
 public:
 
-    PoleBitwy(unsigned int dlugoscLinii);
+    PoleBitwy(unsigned int);
+    PoleBitwy();
 
     /*WSPARCIE*/
 
@@ -53,7 +54,7 @@ public:
 
     /*USTAWIANIE GRY*/
 
-      void ustaw(unsigned int,unsigned int,unsigned int,Oddzial*);
+    void ustaw(unsigned int,unsigned int,unsigned int,Oddzial*);
     void ustawGre(Gra*);
 
 

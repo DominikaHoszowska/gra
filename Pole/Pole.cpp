@@ -3,14 +3,24 @@
 
 #include "Pole.h"
 
-Oddzial* Pole::zwrocOddzial() {
-    return this->oddzial_;
-}
+
+/*USTAWIANIE*/
 void Pole::ustaw(Oddzial* oddzial)
 {
     this->oddzial_=oddzial;
     oddzial->ustawPole(this);
 }
+
+
+
+
+
+
+
+Oddzial* Pole::zwrocOddzial() {
+    return this->oddzial_;
+}
+
 unsigned int Pole::zwrocNrGracza()
 {
     return this->nrGracza_;

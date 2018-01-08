@@ -12,7 +12,10 @@
 
 class Konny: public Zwarcie {
 public:
+
+
     Konny();
+
     void atakujZPierwszejLinii()override;
     void atakujZPierwszejLinii(Oddzial*);/*TODO*/
     void atakujZPierwszehLinii(Zasiegowa*);/*TODO*/

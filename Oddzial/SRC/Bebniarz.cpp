@@ -1,6 +1,6 @@
 #include "../Headers/Bebniarz.h"
 
-Bebniarz::Bebniarz()
+Bebniarz::Bebniarz():Oddzial(), Zasiegowa(), Wsparcie()
 {
     silaAtaku_=0;
     obrona_=1;

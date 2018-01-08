@@ -1,6 +1,6 @@
 #include "../Headers/Miecznik.h"
 
-Miecznik::Miecznik()
+Miecznik::Miecznik(): Oddzial(), Zwarcie()
 {
     silaAtaku_=30;
     obrona_=20;

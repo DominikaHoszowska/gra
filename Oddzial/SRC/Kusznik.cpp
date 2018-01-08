@@ -1,6 +1,6 @@
 #include "../Headers/Kusznik.h"
 
-Kusznik::Kusznik()
+Kusznik::Kusznik():Oddzial(), Zasiegowa()
 {
     silaAtaku_=50;
     obrona_=8;

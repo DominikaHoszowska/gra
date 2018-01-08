@@ -1,6 +1,7 @@
 #ifndef _GRA_H
 #define _GRA_H
 
+
 class Gra;
 #include "Gracz.h"
 #include "PoleBitwy.h"
@@ -19,7 +20,7 @@ public:
 
     unsigned int zwrocDlugoscLinii();
 
-    void stworzPoleBitwy(char* tabPole[6]);
+    void stworzPoleBitwy(std::vector<std::vector<char>>);
 
     virtual Gracz* zwrocPierwszegoGracza();
     virtual Gracz* zwrocDrugiegoGracza();
@@ -31,7 +32,7 @@ public:
     void wypisz();
     static void wypiszPrzerywnik();
 private:
-    unsigned int liczbaTur_;
+    int liczbaTur_;
     unsigned int aktualnyNrTury_;
     unsigned int dlugoscLinii_;
     PoleBitwy* poleBitwy_;
