@@ -47,6 +47,7 @@ int main() {
 
     int dlugoscLinii=2;
     int liczbaTur=2;
+
 //    std::cout << "Wprowadz dlugosc linii" << std::endl;
 //    std::cin >> dlugoscLinii;
 //

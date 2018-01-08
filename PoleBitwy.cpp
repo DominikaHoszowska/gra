@@ -79,15 +79,23 @@ PoleBitwy::PoleBitwy(unsigned int dlugoscLinii):poleGry_(2) {
     }
     for (int i = 0; i < dlugoscLinii; ++i){
         poleGry_.at(0).at(0).push_back(new PolePosilkow());
-        poleGry_.at(0).at(0).at(i)->ustawNrGracza(0);
+        poleGry_.at(0).at(0).at(i)->ustawWspolrzedne(0,0,i);
 
         poleGry_.at(0).at(1).push_back(new PoleDrugiejLinii());
+        poleGry_.at(0).at(1).at(i)->ustawWspolrzedne(0,1,i);
+
         poleGry_.at(0).at(2).push_back(new PolePierwszejLinii());
+        poleGry_.at(0).at(2).at(i)->ustawWspolrzedne(0,2,i);
+
         poleGry_.at(1).at(0).push_back(new PolePierwszejLinii());
+        poleGry_.at(1).at(0).at(i)->ustawWspolrzedne(1,0,i);
+
         poleGry_.at(1).at(1).push_back(new PoleDrugiejLinii());
+        poleGry_.at(1).at(1).at(i)->ustawWspolrzedne(1,1,i);
+
         poleGry_.at(1).at(2).push_back(new PolePosilkow());
+        poleGry_.at(1).at(2).at(i)->ustawWspolrzedne(1,2,i);
     }
-    -
 }
 void PoleBitwy:: ustaw(unsigned int nrGracza,unsigned int nrWiersza,unsigned int nrKolumny,Oddzial* oddzial)
 {

@@ -51,7 +51,6 @@ void Gra::stworzPoleBitwy(std::vector<std::vector<char>> tabPole) {
             }
         }
     }
-
 }
 
 
