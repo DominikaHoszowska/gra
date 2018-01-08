@@ -60,6 +60,8 @@ void Gra::stworzPoleBitwy(std::vector<std::vector<char>> tabPole) {
             }
         }
     }
+    this->pierwszyGracz_->zwrocWojsko()->ustawPoleBitwy(poleBitwy_);
+    this->drugiGracz_->zwrocWojsko()->ustawPoleBitwy(poleBitwy_);
 }
 
 
@@ -90,7 +92,6 @@ void Gra::rozegrajTure() {
     this->poleBitwy_->wycofajWsparcie();
     this->poleBitwy_->aktualizujstan();
     this->wypisz();
-
 }
 unsigned int Gra::zwrocLiczbeTur(){
     return this->liczbaTur_;

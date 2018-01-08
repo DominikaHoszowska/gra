@@ -10,7 +10,9 @@ void Wojsko::kogoWspierac(Pole* pole) {
     }
 }
 void Wojsko::kogoWspieracPierwszyGracz(Pole *pole) {
-    std::vector<std::vector<Pole *>> mojePoleBitwy = this->poleBitwy_->zwrocPoleBitwy(this->zwrocGracza()->zwrocId());
+    std::vector<std::vector<Pole *>> mojePoleBitwy;
+    PoleBitwy* poleBitwy=this->poleBitwy_;
+    mojePoleBitwy= poleBitwy_->zwrocPoleBitwy(this->zwrocGracza()->zwrocId());
     if (pole->zwrocNrWiersza() != 2) {
         mojePoleBitwy.at(2).at(pole->zwrocNrKolumny())->zwrocOddzial()->dodajwsparcie(pole->zwrocOddzial());
         return;
@@ -59,6 +61,10 @@ void Wojsko::kogoWspieracDrugiGracz(Pole *pole)
 void Wojsko::ustawGracza(Gracz *gracz)
 {
     this->gracz_=gracz;
+}
+void Wojsko::ustawPoleBitwy(PoleBitwy *poleBitwy)
+{
+    this->poleBitwy_=poleBitwy;
 }
 
 //Oddzial* Wojsko::znajdzPrzeciwnika(Oddzial* atakujacy, int zasieg)

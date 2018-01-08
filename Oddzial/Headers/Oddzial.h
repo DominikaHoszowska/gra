@@ -31,7 +31,7 @@ public:
     virtual void zadajObrazenia(double);
 
     /*ZWRACANIE WARTOŚCI*/
-    virtual Pole* zwrocPole();
+    Pole* zwrocPole();
     virtual int zwrocZasieg();
     virtual int zwrocLiczebnoscPoczatkowa();
     virtual double zwrocMorale();

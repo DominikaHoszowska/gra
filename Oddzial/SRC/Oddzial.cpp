@@ -102,10 +102,9 @@ void Oddzial:: ustawPole(Pole* pole)
 
 }
 
-void Oddzial::ustawWojsko(Wojsko *wojsko
-)
+void Oddzial::ustawWojsko(Wojsko *wojsko)
 {
-    this->wojsko_-wojsko;
+    this->wojsko_=wojsko;
 }
 Oddzial::Oddzial()
 {
