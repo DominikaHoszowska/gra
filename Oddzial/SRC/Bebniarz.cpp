@@ -1,3 +1,4 @@
+#include <iostream>
 #include "../Headers/Bebniarz.h"
 
 Bebniarz::Bebniarz():Oddzial(), Zasiegowa(), Wsparcie()
@@ -8,4 +9,8 @@ Bebniarz::Bebniarz():Oddzial(), Zasiegowa(), Wsparcie()
     liczebnoscOddzialu_=40;
     liczebnoscPoczatkowa=liczebnoscOddzialu_;
     zasieg_=4;
+}
+void Bebniarz::wypisz()
+{
+    std::cout<<this->OZNACZENIE;
 }

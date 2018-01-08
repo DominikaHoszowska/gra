@@ -1,3 +1,4 @@
+#include <iostream>
 #include "../Headers/Konny.h"
 
 Konny:: Konny(): Oddzial(), Zwarcie()
@@ -24,7 +25,10 @@ void Konny::atakujZPierwszehLinii(Zasiegowa *przeciwnik)
     double obrazenia=(1+1.25*silaAtaku_)*zwrocliczebnosc();
     przeciwnik->zadajObrazenia(obrazenia);
 }
-
+void Konny::wypisz()
+{
+    std::cout<<this->OZNACZENIE;
+}
 
 
 

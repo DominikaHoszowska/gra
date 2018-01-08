@@ -1,3 +1,4 @@
+#include <iostream>
 #include "../Headers/Oddzial.h"
 
 
@@ -148,4 +149,8 @@ void Oddzial::zmniejszMorale()
         return;
     }
 
+}
+
+void Oddzial::wypisz()
+{
 }

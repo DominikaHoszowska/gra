@@ -18,6 +18,7 @@ public:
     void atakujZPierwszejLinii(Oddzial*);
     void atakujZDrugiejLinii(Oddzial*);
     double zwrocObrone() override;
+    void wypisz() override ;
 };
 
 #endif //_KUSZNIK_H

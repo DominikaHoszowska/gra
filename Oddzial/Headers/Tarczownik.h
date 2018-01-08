@@ -13,7 +13,7 @@
 class Tarczownik: public Wsparcie, public Zwarcie {
 public:
     Tarczownik();
-
+    void wypisz() override ;
 
 public:
     static const char OZNACZENIE = 'T';

@@ -1,3 +1,4 @@
+#include <iostream>
 #include "../Headers/Halabardzista.h"
 
 Halabardzista::Halabardzista():Oddzial(), Zwarcie()
@@ -27,3 +28,7 @@ void Halabardzista::atakujZPierwszejLinii(Konny * konik)
 }
 
 
+void Halabardzista::wypisz()
+{
+    std::cout<<this->OZNACZENIE;
+}

@@ -29,8 +29,8 @@ public:
     virtual ~Gra();
 
     void inicjalizuj(std::vector<std::vector<char>>);
-    void wypisz();
-    static void wypiszPrzerywnik();
+    virtual void wypisz();
+    void wypiszPrzerywnik(unsigned int);
 private:
     int liczbaTur_;
     unsigned int aktualnyNrTury_;

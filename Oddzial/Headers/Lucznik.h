@@ -18,6 +18,7 @@ public:
     void atakujZDrugiejLinii()override;
     void atakujZDrugiejLinii(Oddzial*);
     double zwrocObrone() override;
+    void wypisz() override ;
 };
 
 #endif //_LUCZNIK_H

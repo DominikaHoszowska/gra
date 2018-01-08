@@ -1,3 +1,4 @@
+#include <iostream>
 #include "../Headers/Kusznik.h"
 
 Kusznik::Kusznik():Oddzial(), Zasiegowa()
@@ -33,4 +34,8 @@ void Kusznik::atakujZDrugiejLinii(Oddzial *przeciwnik)
 double Kusznik::zwrocObrone()
 {
 //    return this->zwrocPole()->zwrocObrone(this);
+}
+void Kusznik::wypisz()
+{
+    std::cout<<this->OZNACZENIE;
 }

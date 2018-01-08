@@ -1,3 +1,4 @@
+#include <iostream>
 #include "../Headers/Lucznik.h"
 
 Lucznik::Lucznik():Oddzial(), Zasiegowa()
@@ -36,4 +37,8 @@ double Lucznik::zwrocObrone()
     //TODO
     throw std::runtime_error("Not implemented");
 //    return this->zwrocPole()->zwrocObrone(this);
+}
+void Lucznik::wypisz()
+{
+    std::cout<<this->OZNACZENIE;
 }

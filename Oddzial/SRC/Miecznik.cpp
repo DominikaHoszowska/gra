@@ -1,3 +1,4 @@
+#include <iostream>
 #include "../Headers/Miecznik.h"
 
 Miecznik::Miecznik(): Oddzial(), Zwarcie()
@@ -18,6 +19,10 @@ void Miecznik::atakujZPierwszejLinii(Oddzial *przeciwnik)
 {
     double obrazenia=(1+silaAtaku_)*zwrocliczebnosc();
     przeciwnik->zadajObrazenia(obrazenia);
+}
+void Miecznik::wypisz()
+{
+    std::cout<<this->OZNACZENIE;
 }
 
 

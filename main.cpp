@@ -80,7 +80,7 @@ int main() {
 //        }
 //    }
     gra.inicjalizuj(tabPole);
-
+    gra.wypisz();
 //    while(!gra.czyKoniec())
 //    {
 //        gra.rozegrajTure();

@@ -58,7 +58,7 @@ public:
     void ustawGre(Gra*);
 
 
-      void wypisz();
+      virtual void wypisz();
       bool czyPuste(unsigned int);/*dostaje nr Gracza i sprawdza czy ma puste wojsko*/
       void aktualizujstan();
       void przeliczStraty();

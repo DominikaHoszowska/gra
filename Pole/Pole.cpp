@@ -64,7 +64,8 @@ int Pole::odleglosc(Pole drugiePole)
 
 void Pole::wypisz()
 {
-    std::cout<<this->zwrocOddzial()->OZNACZENIE<<":";
+    this->zwrocOddzial()->wypisz();
+    std::cout<<':';
     int liczba=this->zwrocOddzial()->zwrocliczebnosc()/this->zwrocOddzial()->zwrocLiczebnoscPoczatkowa();
     if(liczba==1)
     {

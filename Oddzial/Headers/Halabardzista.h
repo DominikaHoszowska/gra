@@ -19,7 +19,7 @@ public:
     void atakujZPierwszejLinii()override;
     virtual void atakujZPierwszejLinii(Oddzial*);
     void atakujZPierwszejLinii(Konny*);
-
+    void wypisz() override ;
 };
 
 #endif //_HALABARDZISTA_H

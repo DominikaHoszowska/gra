@@ -20,6 +20,7 @@ public:
     void atakujZPierwszejLinii(Oddzial*);/*TODO*/
     void atakujZPierwszehLinii(Zasiegowa*);/*TODO*/
     static const char OZNACZENIE= 'K';
+    void wypisz() override ;
 };
 
 #endif //_KONNY_H

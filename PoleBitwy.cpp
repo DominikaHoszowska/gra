@@ -111,6 +111,7 @@ void PoleBitwy::wypisz()
     {
         for(unsigned int nrWiersza=0;nrWiersza<3;nrWiersza++)
         {
+            std::cout<<"            ";
             for (unsigned int nrKolumny=0;nrKolumny<this->gra_->zwrocDlugoscLinii();nrKolumny++)
             {
                 if(poleGry_.at(nrGracza).at(nrWiersza).at(nrKolumny)== nullptr)
@@ -126,7 +127,7 @@ void PoleBitwy::wypisz()
             std::cout<<std::endl;
         }
 
-        Gra::wypiszPrzerywnik();
+        this->zwrocGre()->wypiszPrzerywnik(zwrocGre()->zwrocDlugoscLinii());
     }
 }
 void PoleBitwy::przesunOddzialy(){

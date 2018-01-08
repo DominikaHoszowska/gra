@@ -121,15 +121,17 @@ Gra::Gra(unsigned int liczbaTur, unsigned int dlugoscLinii) :
 }
 
 void Gra::wypisz()
-{   wypiszPrzerywnik();
-    wypiszPrzerywnik();
+{   wypiszPrzerywnik(this->dlugoscLinii_);
+    wypiszPrzerywnik(this->dlugoscLinii_);
     std::cout<<"Tura "<<this->aktualnyNrTury_<<" z "<<liczbaTur_<<std::endl;
     this->poleBitwy_->wypisz();
+    wypiszPrzerywnik(this->dlugoscLinii_);
 }
-void Gra::wypiszPrzerywnik()
+void Gra::wypiszPrzerywnik(unsigned int dlugosc)
 {
-    for (int a=0;a<20;a++)
-        std::cout<<"-";
+
+    for (unsigned int a=0;a<5*dlugosc+12;a++)
+        std::cout<<'-';
     std::cout<<std::endl;
 }
 

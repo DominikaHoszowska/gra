@@ -15,7 +15,7 @@ public:
     static const char OZNACZENIE = 'M';
     void atakujZPierwszejLinii()override;
     void atakujZPierwszejLinii(Oddzial*);
-
+    void wypisz() override ;
 };
 
 #endif //_MIECZNIK_H

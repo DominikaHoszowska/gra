@@ -1,3 +1,4 @@
+#include <iostream>
 #include "../Headers/Tarczownik.h"
 
 Tarczownik::Tarczownik()
@@ -10,3 +11,7 @@ Tarczownik::Tarczownik()
     zasieg_=2;
 }
 
+void Tarczownik::wypisz()
+{
+    std::cout<<this->OZNACZENIE;
+}
