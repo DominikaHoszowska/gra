@@ -48,6 +48,7 @@ public:
     virtual void usun();
     virtual void zmniejszMorale();
     virtual void przeliczStraty();
+    void ustawWojsko(Wojsko*);
 
 
 private:

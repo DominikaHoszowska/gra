@@ -98,8 +98,14 @@ double Oddzial::zwrocObrone()
 void Oddzial:: ustawPole(Pole* pole)
 {
     this->pole_=pole;
+
 }
 
+void Oddzial::ustawWojsko(Wojsko *wojsko
+)
+{
+    this->wojsko_-wojsko;
+}
 Oddzial::Oddzial()
 {
     morale_=0;

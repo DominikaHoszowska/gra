@@ -56,6 +56,11 @@ void Wojsko::kogoWspieracDrugiGracz(Pole *pole)
 
 }
 
+void Wojsko::ustawGracza(Gracz *gracz)
+{
+    this->gracz_=gracz;
+}
+
 //Oddzial* Wojsko::znajdzPrzeciwnika(Oddzial* atakujacy, int zasieg)
 //{
 //    unsigned  int nrPrzeciwnika;

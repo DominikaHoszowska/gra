@@ -25,6 +25,7 @@ public:
 //    virtual Oddzial* znajdzPrzeciwnika(Oddzial*,int);
 //    virtual Oddzial* znajdzPrzeciwnika(Lucznik*,int);
     PoleBitwy* zwrocPoleBitwy();
+    void ustawGracza(Gracz*);
 private:
 
     void przesuniecieWojsk();

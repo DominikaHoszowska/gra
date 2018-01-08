@@ -9,7 +9,10 @@ void Gracz::atak() {
 Gracz::~Gracz() {
     delete wojsko_;
 }
-Gracz::Gracz(unsigned int id_) : id_(id_) {}
+Gracz::Gracz(unsigned int id_) : id_(id_) {
+    wojsko_=new Wojsko();
+    wojsko_->ustawGracza(this);
+}
 
 Wojsko* Gracz::zwrocWojsko()
 {

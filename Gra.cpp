@@ -14,6 +14,7 @@
 
 void Gra::inicjalizuj(std::vector<std::vector<char>> tabPole) {
     stworzPoleBitwy(tabPole);
+
 }
 void Gra::stworzPoleBitwy(std::vector<std::vector<char>> tabPole) {
 
@@ -48,6 +49,14 @@ void Gra::stworzPoleBitwy(std::vector<std::vector<char>> tabPole) {
                         throw std::invalid_argument("Nieprawidlowy znak na planszy");
                 }
                 poleBitwy_->ustaw(nrGracza,nrWiersza,nrKolumny,oddzial);
+                if(nrGracza==0)
+                {
+                    oddzial->ustawWojsko(this->pierwszyGracz_->zwrocWojsko());
+                }
+                else
+                {
+                    oddzial->ustawWojsko(this->drugiGracz_->zwrocWojsko());
+                }
             }
         }
     }
