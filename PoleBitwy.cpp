@@ -77,7 +77,7 @@ PoleBitwy::PoleBitwy(unsigned int dlugoscLinii):poleGry_(2) {
         poleGry_.at(0).push_back(std::vector<Pole *>(0));
         poleGry_.at(1).push_back(std::vector<Pole *>(0));
     }
-    for (int i = 0; i < dlugoscLinii; ++i){
+    for (unsigned int i = 0; i < dlugoscLinii; ++i){
         poleGry_.at(0).at(0).push_back(new PolePosilkow());
         poleGry_.at(0).at(0).at(i)->ustawWspolrzedne(0,0,i);
 
