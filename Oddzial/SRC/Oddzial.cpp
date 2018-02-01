@@ -48,8 +48,10 @@ void Oddzial::zadajObrazenia(double obrazenia)
         this->straty_+=straty;
     }
 }
-
-
+void Oddzial::przyjmijAtak(Konny & oddzial)
+{
+    oddzial.atakuj(*this);
+}
 /*ZWRACANIE WARTOŚCI*/
 
 Pole*Oddzial:: zwrocPole()

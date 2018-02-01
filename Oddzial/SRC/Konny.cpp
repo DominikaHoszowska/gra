@@ -24,10 +24,14 @@ void Konny::atakuj(PolePierwszejLinii &pole) {
 void Konny::przyjmijAtak(Halabardzista &oddzial, PolePierwszejLinii &pole) {
     oddzial.atakuj(*this, pole);
 }
-void Konny::atakuj(Oddzial &) {
+void Konny::atakuj(Oddzial & oddzial) {
 
+    oddzial.zadajObrazenia((1+this->silaAtaku_)*liczebnoscOddzialu_);
 }
-
+void Konny::atakuj(Zasiegowa &oddzial)
+{
+    oddzial.zadajObrazenia((1+(this->silaAtaku_*0.25))*liczebnoscOddzialu_);
+}
 
 
 
