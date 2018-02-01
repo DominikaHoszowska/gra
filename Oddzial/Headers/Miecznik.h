@@ -14,6 +14,8 @@ public:
     Miecznik();
     static const char OZNACZENIE = 'M';
 
+    void atakuj(PolePierwszejLinii &linii) override;
+
     void wypisz() override ;
 };
 

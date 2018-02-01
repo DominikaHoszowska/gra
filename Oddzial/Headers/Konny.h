@@ -12,7 +12,7 @@
 
 class Konny: public Zwarcie {
 public:
-
+    void atakuj(PolePierwszejLinii &linii) override;
 
     Konny();
 

@@ -16,6 +16,11 @@ void Konny::wypisz()
     std::cout<<this->OZNACZENIE;
 }
 
+void Konny::atakuj(PolePierwszejLinii &pole) {
+//    TODO
+
+}
+
 
 
 

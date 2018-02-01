@@ -8,3 +8,7 @@ void Wsparcie::wspieraj()
 //    Pole* pole=this->zwrocPole();
 //    wojsko->kogoWspierac(pole); TODO
 }
+
+
+
+

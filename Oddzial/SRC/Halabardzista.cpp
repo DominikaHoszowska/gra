@@ -15,3 +15,7 @@ void Halabardzista::wypisz()
 {
     std::cout<<this->OZNACZENIE;
 }
+
+void Halabardzista::atakuj(PolePierwszejLinii &pole) {
+//TODO
+}

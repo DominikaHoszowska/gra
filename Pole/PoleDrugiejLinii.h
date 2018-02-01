@@ -6,7 +6,7 @@
 
 class PoleDrugiejLinii: public Pole {
 public:
-
+    void atakuj() override;
 };
 
 #endif //_POLEDRUGIEJLINII_H

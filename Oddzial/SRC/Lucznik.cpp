@@ -14,10 +14,18 @@ Lucznik::Lucznik():Oddzial(), Zasiegowa()
 double Lucznik::zwrocObrone()
 {
     //TODO
-    throw std::runtime_error("Not implemented");
-//    return this->zwrocPole()->zwrocObrone(this);
+
 }
 void Lucznik::wypisz()
 {
     std::cout<<this->OZNACZENIE;
+}
+
+void Lucznik::atakuj(PoleDrugiejLinii &pole) {
+
+//TODO
+}
+
+void Lucznik::atakuj(PolePierwszejLinii &pole) {
+//TODO
 }

@@ -13,11 +13,10 @@
 class Halabardzista: public Zwarcie {
 public:
     Halabardzista();
-
-public:
     static const char OZNACZENIE = 'H';
-
     void wypisz() override ;
+
+    void atakuj(PolePierwszejLinii &linii) override;
 };
 
 #endif //_HALABARDZISTA_H

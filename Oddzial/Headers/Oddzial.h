@@ -4,6 +4,8 @@ class Oddzial;
 
 #include "../../Pole/Pole.h"
 #include "../../Wojsko.h"
+#include "../../Pole/PoleDrugiejLinii.h"
+#include "../../Pole/PolePierwszejLinii.h"
 
 
 //#include "Tarczownik.h"
@@ -26,7 +28,8 @@ public:
 
     virtual void wycofajwsparcie();/*TODO*/
     /*ATAK*/
-
+    virtual void atakuj(PoleDrugiejLinii&)=0;
+    virtual void atakuj(PolePierwszejLinii&)=0;
     virtual void zadajObrazenia(double);
 
     /*ZWRACANIE WARTOŚCI*/

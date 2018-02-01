@@ -16,4 +16,8 @@ void Miecznik::wypisz()
     std::cout<<this->OZNACZENIE;
 }
 
+void Miecznik::atakuj(PolePierwszejLinii &pole) {
+//TODO
+}
+
 

@@ -11,6 +11,11 @@
 
 class Wsparcie: virtual public Oddzial {
     void wspieraj();
+
+public:
+    void atakuj(PoleDrugiejLinii &linii) override=0;
+
+    void atakuj(PolePierwszejLinii &linii) override=0;
 };
 
 #endif //_WSPARCIE_H

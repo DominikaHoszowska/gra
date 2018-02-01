@@ -17,7 +17,7 @@ public:
     Pole(Oddzial* = nullptr);
 
     /*ATAK*/
-
+    virtual void atakuj()=0;
     /*USTAWIANIE*/
 
     virtual void ustaw(Oddzial*);

@@ -15,3 +15,7 @@
 //{
 //    return kusznik->obrona()*0.7;
 //}
+void PolePierwszejLinii::atakuj() {
+
+    this->zwrocOddzial()->atakuj(*this);
+}

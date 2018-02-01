@@ -19,3 +19,12 @@ void Kusznik::wypisz()
 {
     std::cout<<this->OZNACZENIE;
 }
+
+void Kusznik::atakuj(PoleDrugiejLinii &pole) {
+//    TODO
+
+}
+
+void Kusznik::atakuj(PolePierwszejLinii &pole) {
+//TODO
+}
