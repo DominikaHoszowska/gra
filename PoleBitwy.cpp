@@ -483,12 +483,13 @@ Gra* PoleBitwy::zwrocGre()
 PoleBitwy::~PoleBitwy() {
     for(unsigned int nrGracza=0;nrGracza<=1;nrGracza++)
     {
-        for(unsigned int nrWiersza=0;nrWiersza<=3;nrWiersza++)
+        for(unsigned int nrWiersza=0;nrWiersza<3;nrWiersza++)
         {
             for(unsigned int nrKolumny=0;nrKolumny<this->gra_->zwrocDlugoscLinii();nrKolumny++)
             {
-                if(poleGry_.at(nrGracza).at(nrWiersza).at(nrKolumny)!= nullptr)
+                if(poleGry_.at(nrGracza).at(nrWiersza).at(nrKolumny)->zwrocOddzial()!= nullptr)
                 {
+                    delete poleGry_.at(nrGracza).at(nrWiersza).at(nrKolumny)->zwrocOddzial();
                     delete poleGry_.at(nrGracza).at(nrWiersza).at(nrKolumny);
                 }
             }
