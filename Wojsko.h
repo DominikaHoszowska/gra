@@ -22,7 +22,7 @@ public:
     virtual void kogoWspieracPierwszyGracz(Pole*);
     virtual void kogoWspieracDrugiGracz(Pole*);
     virtual Gracz* zwrocGracza();
-//    virtual Oddzial* znajdzPrzeciwnika(Oddzial*,int);
+    virtual Oddzial* znajdzPrzeciwnika(Oddzial*,int);
 //    virtual Oddzial* znajdzPrzeciwnika(Lucznik*,int);
     PoleBitwy* zwrocPoleBitwy();
     void ustawGracza(Gracz*);

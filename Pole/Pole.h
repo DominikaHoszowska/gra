@@ -40,6 +40,7 @@ public:
     virtual void usunOddzial();
 //    virtual double zwrocObrone(Lucznik*);
 //    virtual double zwrocObrone(Kusznik*);
+    virtual ~Pole();
 };
 
 #endif //_POLE_H

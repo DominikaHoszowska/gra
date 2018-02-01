@@ -18,6 +18,7 @@ public:
     virtual ~Gracz();
     Wojsko* zwrocWojsko();
     unsigned int zwrocId();
+
 private:
     unsigned int id_;
     Wojsko* wojsko_;

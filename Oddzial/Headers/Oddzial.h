@@ -51,6 +51,8 @@ public:
     void ustawWojsko(Wojsko*);
     virtual void wypisz();
 
+    virtual ~Oddzial()= default;
+
 
 private:
 

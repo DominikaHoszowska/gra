@@ -15,6 +15,8 @@ public:
     Bebniarz();
     static const char OZNACZENIE ='B';
     void wypisz() override ;
+
+    virtual ~Bebniarz()= default;
 };
 
 #endif //_BEBNIARZ_H

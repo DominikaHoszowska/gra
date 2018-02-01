@@ -100,6 +100,13 @@ void Pole::zmniejszMoralenaSasiednich()
 {
     this->zwrocPoleBitwy()->zmniejszMorale(nrGracza_,nrKolumny_);
 }
+
+Pole::~Pole() {
+    if(this->zwrocOddzial()!= nullptr)
+    {
+        delete oddzial_;
+    }
+}
 //double zwrocObrone(Lucznik* lucznik)
 //{
 //    return lucznik->obrona();

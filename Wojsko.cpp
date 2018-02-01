@@ -1,4 +1,5 @@
 #include "Wojsko.h"
+#include <vector>
 #include "Oddzial/Headers/Oddzial.h"
 #include <stdexcept>
 /*WSPARCIE*/
@@ -57,7 +58,6 @@ void Wojsko::kogoWspieracDrugiGracz(Pole *pole)
     pole->zwrocOddzial()->dodajwsparcie(pole->zwrocOddzial());
 
 }
-
 void Wojsko::ustawGracza(Gracz *gracz)
 {
     this->gracz_=gracz;
@@ -67,39 +67,39 @@ void Wojsko::ustawPoleBitwy(PoleBitwy *poleBitwy)
     this->poleBitwy_=poleBitwy;
 }
 
-//Oddzial* Wojsko::znajdzPrzeciwnika(Oddzial* atakujacy, int zasieg)
-//{
-//    unsigned  int nrPrzeciwnika;
-//    if(this->zwrocGracza()->zwrocId()==0)
-//    {
-//        nrPrzeciwnika=1;
-//    }
-//    else
-//    {
-//        nrPrzeciwnika=0;
-//    }
-//    vector<Pole*> polePrzeciwnika=this->poleBitwy_->zwrocPolePrzeciwnika(nrPrzeciwnika);
-//    unsigned int nrKolumny=atakujacy->zwrocPole()->zwrocNrKolumny();
-//    if(polePrzeciwnika.at(nrKolumny)->zwrocOddzial()!= nullptr)
-//    {
-//        return polePrzeciwnika.at(nrKolumny)->zwrocOddzial();
-//    }
-//    int odleglosc=1;
-//    while(odleglosc<=zasieg)
-//    {
-//        if(nrKolumny-odleglosc>=0&& polePrzeciwnika.at(nrKolumny-odleglosc)->zwrocOddzial()!= nullptr)
-//        {
-//            return polePrzeciwnika.at(nrKolumny-odleglosc)->zwrocOddzial();
-//        }
-//        if(nrKolumny+odleglosc<this->zwrocPoleBitwy()->zwrocGre()->zwrocDlugoscLinii()&&
-//           polePrzeciwnika.at(nrKolumny+odleglosc)->zwrocOddzial()!= nullptr)
-//        {
-//            return polePrzeciwnika.at(nrKolumny+odleglosc)->zwrocOddzial();
-//        }
-//        odleglosc++;
-//    }
-//    return nullptr;
-//}
+Oddzial* Wojsko::znajdzPrzeciwnika(Oddzial* atakujacy, int zasieg)
+{
+    unsigned  int nrPrzeciwnika;
+    if(this->zwrocGracza()->zwrocId()==0)
+    {
+        nrPrzeciwnika=1;
+    }
+    else
+    {
+        nrPrzeciwnika=0;
+    }
+    std::vector<Pole*> polePrzeciwnika=this->poleBitwy_->zwrocPolePrzeciwnika(nrPrzeciwnika);
+    unsigned int nrKolumny=atakujacy->zwrocPole()->zwrocNrKolumny();
+    if(polePrzeciwnika.at(nrKolumny)->zwrocOddzial()!= nullptr)
+    {
+        return polePrzeciwnika.at(nrKolumny)->zwrocOddzial();
+    }
+    int odleglosc=1;
+    while(odleglosc<=zasieg)
+    {
+        if(nrKolumny-odleglosc>=0&& polePrzeciwnika.at(nrKolumny-odleglosc)->zwrocOddzial()!= nullptr)
+        {
+            return polePrzeciwnika.at(nrKolumny-odleglosc)->zwrocOddzial();
+        }
+        if(nrKolumny+odleglosc<this->zwrocPoleBitwy()->zwrocGre()->zwrocDlugoscLinii()&&
+           polePrzeciwnika.at(nrKolumny+odleglosc)->zwrocOddzial()!= nullptr)
+        {
+            return polePrzeciwnika.at(nrKolumny+odleglosc)->zwrocOddzial();
+        }
+        odleglosc++;
+    }
+    return nullptr;
+}
 //Oddzial* Wojsko::znajdzPrzeciwnika(Lucznik* atakujacy, int zasieg)
 //{
 //    unsigned  int nrPrzeciwnika;

@@ -27,6 +27,8 @@ public:
     PoleBitwy(unsigned int);
     PoleBitwy();
 
+    virtual ~PoleBitwy();
+
     /*WSPARCIE*/
 
       void wsparcie();/*wywoluje funkcję wspieraj() dla kazdego oddzialu*/

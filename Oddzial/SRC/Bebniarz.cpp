@@ -14,3 +14,5 @@ void Bebniarz::wypisz()
 {
     std::cout<<this->OZNACZENIE;
 }
+
+
