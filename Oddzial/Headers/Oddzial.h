@@ -26,8 +26,7 @@ public:
 
     virtual void wycofajwsparcie();/*TODO*/
     /*ATAK*/
-    virtual void atakujZPierwszejLinii();
-    virtual void atakujZDrugiejLinii();
+
     virtual void zadajObrazenia(double);
 
     /*ZWRACANIE WARTOŚCI*/

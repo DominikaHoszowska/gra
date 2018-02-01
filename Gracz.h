@@ -14,7 +14,6 @@ class Gracz {
 public:
 
     Gracz(unsigned int id_);
-    void atak();/*TODO*/
     virtual ~Gracz();
     Wojsko* zwrocWojsko();
     unsigned int zwrocId();

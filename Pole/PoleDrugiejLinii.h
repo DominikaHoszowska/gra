@@ -6,7 +6,6 @@
 
 class PoleDrugiejLinii: public Pole {
 public:
-    void atakuj() override;
 
 };
 

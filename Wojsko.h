@@ -17,7 +17,6 @@ class Wojsko;
 class Wojsko {
 public: 
     
-    void atak();
     virtual void kogoWspierac(Pole*);
     virtual void kogoWspieracPierwszyGracz(Pole*);
     virtual void kogoWspieracDrugiGracz(Pole*);

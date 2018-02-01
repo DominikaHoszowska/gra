@@ -48,14 +48,7 @@ void Oddzial::zadajObrazenia(double obrazenia)
         this->straty_+=straty;
     }
 }
-void Oddzial::atakujZPierwszejLinii()
-{
-    /*nie atakuj*/
-}
-void Oddzial::atakujZDrugiejLinii()
-{
-    /*nie atakuj*/
-}
+
 
 /*ZWRACANIE WARTOŚCI*/
 

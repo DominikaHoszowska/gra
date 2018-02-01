@@ -16,9 +16,7 @@ public:
 
 public:
     static const char OZNACZENIE = 'H';
-    void atakujZPierwszejLinii()override;
-    virtual void atakujZPierwszejLinii(Oddzial*);
-    void atakujZPierwszejLinii(Konny*);
+
     void wypisz() override ;
 };
 

@@ -6,10 +6,7 @@
 #include "../Oddzial/Headers/Halabardzista.h"
 #include "../Oddzial/Headers/Konny.h"
 
-void PolePierwszejLinii::atakuj()
-{
-    this->zwrocOddzial()->atakujZPierwszejLinii();
-}
+
 //double PolePierwszejLinii::zwrocObrone(Lucznik* lucznik)
 //{
 //    return lucznik->obrona()*0.5;

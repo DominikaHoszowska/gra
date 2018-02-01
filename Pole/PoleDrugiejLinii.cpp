@@ -5,7 +5,3 @@
 #include "../Oddzial/Headers/Halabardzista.h"
 #include "../Oddzial/Headers/Konny.h"
 
-void PoleDrugiejLinii::atakuj()
-{
-    this->zwrocOddzial()->atakujZDrugiejLinii();
-}

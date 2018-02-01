@@ -11,7 +11,6 @@
 
 class Zwarcie: virtual public Oddzial {
 public:
-    void atakujZDrugiejLinii() override ;
 };
 
 #endif //_ZWARCIE_H

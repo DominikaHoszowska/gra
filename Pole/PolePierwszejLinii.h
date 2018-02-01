@@ -4,9 +4,6 @@
 #include "../Oddzial/Headers/Kusznik.h"
 
 class PolePierwszejLinii: public Pole {
-    void atakuj() override;
-//    double zwrocObrone(Lucznik*) override ;
-//    double zwrocObrone(Kusznik*) override ;
 
 };
 

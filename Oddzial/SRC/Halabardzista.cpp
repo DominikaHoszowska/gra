@@ -10,23 +10,6 @@ Halabardzista::Halabardzista():Oddzial(), Zwarcie()
     zasieg_=2;
     liczebnoscPoczatkowa=liczebnoscOddzialu_;
 }
-void Halabardzista::atakujZPierwszejLinii() {
-//    Oddzial* przeciwnik = zwrocWojsko()->znajdzPrzeciwnika(this,this->zwrocZasieg());
-//    if(przeciwnik!= nullptr)
-//        atakujZPierwszejLinii(przeciwnik);
-}
-void Halabardzista::atakujZPierwszejLinii(Oddzial * przeciwnik)
-{
-    double obrazenia=(1+silaAtaku_)*zwrocliczebnosc();
-    przeciwnik->zadajObrazenia(obrazenia);
-}
-void Halabardzista::atakujZPierwszejLinii(Konny * konik)
-
-{
-    double obrazenia=(1+1.5*silaAtaku_)*zwrocliczebnosc();
-    konik->zadajObrazenia(obrazenia);
-}
-
 
 void Halabardzista::wypisz()
 {

@@ -17,7 +17,6 @@ public:
     Pole(Oddzial* = nullptr);
 
     /*ATAK*/
-    virtual void atakuj(){}
 
     /*USTAWIANIE*/
 

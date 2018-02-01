@@ -12,12 +12,6 @@ void Pole::ustaw(Oddzial* oddzial)
 }
 
 
-
-
-
-
-
-
 Oddzial* Pole::zwrocOddzial() {
     return this->oddzial_;
 }

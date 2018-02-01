@@ -2,10 +2,6 @@
 #include <iostream>
 #include <stdexcept>
 
-void Gracz::atak() {
-    throw std::runtime_error("TODO");
-}
-
 Gracz::~Gracz() {
     delete wojsko_;
 }

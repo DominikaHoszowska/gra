@@ -47,7 +47,7 @@ void PoleBitwy::atak()
             for(unsigned int nrKolumny=0;nrKolumny<this->gra_->zwrocDlugoscLinii();nrKolumny++)
             {
                 if(poleGry_.at(nrGracza).at(nrWiersza).at(nrKolumny)->zwrocOddzial()!= nullptr)
-                    poleGry_.at(nrGracza).at(nrWiersza).at(nrKolumny)->atakuj();
+//                  TODO
             }
         }
     }
