@@ -13,7 +13,9 @@
 class Konny: public Zwarcie {
 public:
     void atakuj(PolePierwszejLinii &linii) override;
-
+    void przyjmijAtak(Halabardzista &halabardzista, PolePierwszejLinii &linii) override;
+    void atakuj(Zasiegowa&) override;
+    void atakuj (Oddzial&) override ;
     Konny();
 
     static const char OZNACZENIE= 'K';

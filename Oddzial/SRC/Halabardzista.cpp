@@ -19,3 +19,7 @@ void Halabardzista::wypisz()
 void Halabardzista::atakuj(PolePierwszejLinii &pole) {
 //TODO
 }
+
+void Halabardzista::atakuj(Konny &konny, PolePierwszejLinii &pole) {
+//TODO
+}

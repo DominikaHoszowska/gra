@@ -67,7 +67,7 @@ void Wojsko::ustawPoleBitwy(PoleBitwy *poleBitwy)
     this->poleBitwy_=poleBitwy;
 }
 
-Oddzial* Wojsko::znajdzPrzeciwnika(Oddzial* atakujacy, int zasieg)
+Oddzial* Wojsko::znajdzPrzeciwnika(Oddzial& atakujacy, int zasieg)
 {
     unsigned  int nrPrzeciwnika;
     if(this->zwrocGracza()->zwrocId()==0)
@@ -79,7 +79,7 @@ Oddzial* Wojsko::znajdzPrzeciwnika(Oddzial* atakujacy, int zasieg)
         nrPrzeciwnika=0;
     }
     std::vector<Pole*> polePrzeciwnika=this->poleBitwy_->zwrocPolePrzeciwnika(nrPrzeciwnika);
-    unsigned int nrKolumny=atakujacy->zwrocPole()->zwrocNrKolumny();
+    unsigned int nrKolumny=atakujacy.zwrocPole()->zwrocNrKolumny();
     if(polePrzeciwnika.at(nrKolumny)->zwrocOddzial()!= nullptr)
     {
         return polePrzeciwnika.at(nrKolumny)->zwrocOddzial();
@@ -100,7 +100,7 @@ Oddzial* Wojsko::znajdzPrzeciwnika(Oddzial* atakujacy, int zasieg)
     }
     return nullptr;
 }
-//Oddzial* Wojsko::znajdzPrzeciwnika(Lucznik* atakujacy, int zasieg)
+//Oddzial* Wojsko::znajdzPrzeciwnika(Lucznik& atakujacy, int zasieg)
 //{
 //    unsigned  int nrPrzeciwnika;
 //    if(this->zwrocGracza()->zwrocId()==0)

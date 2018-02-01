@@ -15,10 +15,11 @@ public:
     Bebniarz();
     static const char OZNACZENIE ='B';
     void wypisz() override ;
-
     void atakuj(PoleDrugiejLinii&)=0;
-
     virtual ~Bebniarz()= default;
+
+
+
 };
 
 #endif //_BEBNIARZ_H

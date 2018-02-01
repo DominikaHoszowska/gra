@@ -13,7 +13,7 @@ Kusznik::Kusznik():Oddzial(), Zasiegowa()
 
 double Kusznik::zwrocObrone()
 {
-//    return this->zwrocPole()->zwrocObrone(this);
+//    return this->zwrocPole()->zwrocObrone(this); n
 }
 void Kusznik::wypisz()
 {
@@ -21,8 +21,8 @@ void Kusznik::wypisz()
 }
 
 void Kusznik::atakuj(PoleDrugiejLinii &pole) {
-//    TODO
-
+    Oddzial* przeciwnik=this->zwrocWojsko()->znajdzPrzeciwnika(*this,zwrocZasieg());
+    przeciwnik->przyjmijAtak(*this,pole);
 }
 
 void Kusznik::atakuj(PolePierwszejLinii &pole) {

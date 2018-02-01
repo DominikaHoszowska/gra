@@ -6,6 +6,7 @@ class Oddzial;
 #include "../../Wojsko.h"
 #include "../../Pole/PoleDrugiejLinii.h"
 #include "../../Pole/PolePierwszejLinii.h"
+#include "Halabardzista.h"
 
 
 //#include "Tarczownik.h"
@@ -30,8 +31,13 @@ public:
     /*ATAK*/
     virtual void atakuj(PoleDrugiejLinii&)=0;
     virtual void atakuj(PolePierwszejLinii&)=0;
+    virtual void atakuj(Oddzial&, Pole&)=0;
+    virtual void atakuj(Konny&, PolePierwszejLinii&)=0;
+    virtual void atakuj(Konny&, PoleDrugiejLinii&)=0;
+    virtual void atakuj(Zasiegowa&)=0;
+    virtual void atakuj (Oddzial&)=0;
     virtual void zadajObrazenia(double);
-
+    virtual void przyjmijAtak(Konny&);/*TODO*/
     /*ZWRACANIE WARTOŚCI*/
     Pole* zwrocPole();
     virtual int zwrocZasieg();

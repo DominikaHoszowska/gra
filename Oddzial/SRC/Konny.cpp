@@ -17,7 +17,14 @@ void Konny::wypisz()
 }
 
 void Konny::atakuj(PolePierwszejLinii &pole) {
-//    TODO
+    Oddzial* przeciwnik=this->zwrocWojsko()->znajdzPrzeciwnika(*this,this->zwrocZasieg());
+    przeciwnik->przyjmijAtak(*this);
+}
+
+void Konny::przyjmijAtak(Halabardzista &oddzial, PolePierwszejLinii &pole) {
+    oddzial.atakuj(*this, pole);
+}
+void Konny::atakuj(Oddzial &) {
 
 }
 

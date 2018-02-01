@@ -16,6 +16,8 @@ public:
     static const char OZNACZENIE = 'H';
     void wypisz() override ;
 
+    void atakuj(Konny &konny, PolePierwszejLinii &linii) override;
+
     void atakuj(PolePierwszejLinii &linii) override;
 };
 
